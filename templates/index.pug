@@ -1,9 +1,25 @@
 - var page = 'Home';
+include blocks/blocks
+
 doctype html
 html.no-js.is-observer
   include components/head.pug
   body
     include components/header.pug
     main
+      include components/artist-hero.pug 
+      include components/full-width-video.pug 
+      include components/about-author-heading.pug 
+      include components/double-image.pug 
+      +author-copy('Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything the space between things, all in one, which makes it feel like her paintings vibrate with captured time.')
+      +author-copy('“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things aand the space between things, all in one, which makes it feel like her paintings vibrate with captured time.')
+      +author-quote('“Visual perception, as we know, is unstable: If you look at something long enough, its appearance begins to shift.”')
+      +author-copy('Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.')
+      +author-copy('“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.')
+      +author-quote('“Each time you remember something, you’re not being teleported to the past—you physically experiencing it in the present.')
+      
+      
+      
+      .spacer
 
     include components/footer.pug

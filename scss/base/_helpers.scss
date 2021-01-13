@@ -17,13 +17,29 @@
  * 2. Center it in the viewport
  * 3. Leave some space on the edges, especially valuable on small screens
  */
-.container {
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 6px;
+
+    @include respond-to(sm){
+      column-gap: 34px;
+    }
+  }
+
+ .container {
   max-width: $max-width; /* 1 */
   margin-left: auto; /* 2 */
   margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
+  padding-left: 12px; /* 3 */
+  padding-right: 12px; /* 3 */
   width: 100%; /* 1 */
+
+  @include respond-to(sm){
+    padding-left: 34px; /* 3 */
+    padding-right: 34px; /* 3 */
+  }
 }
 
 /**
@@ -81,8 +97,74 @@ html.disable-scrolling {
   }
 }
 
+.animated-line__container{
+  position: relative;
+}
+
+.spacer{
+  height: 500px;
+}
+
+.animated-line{
+  width: 500px;
+  height: 6px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  transition: 0.4s;
+  opacity: 0;
+
+  @include respond-to(sm){
+    height: 11px;
+    top: 20%;
+  }
+}
+
+
+.is-visible{
+  &.animated-line-show{
+    left: -463px;
+    animation-name: show-line;
+    animation-duration: 0.9s;
+    opacity: 1 !important;
+
+    @include respond-to(sm){
+      left: -400px;
+    }
+
+    @include respond-to(xl){
+      width: 35vw;
+    }
+
+  }
+}
+
+@keyframes show-line {
+  from {left: -1500px; opacity: 0;}
+  to {left: -463px; opacity: 1 !important;}
+}
+
+@include respond-to(sm){
+
+  @keyframes show-line {
+    from {left: -1500px; opacity: 0;}
+    to {left: -400px; opacity: 1 !important;}
+  }
+}
+
+.reveal-container{
+  overflow: hidden;
+}
+
 /* Scroll reveal */
 .is-observer {
+
+  .reveal-text{
+    transform: translateY(150%);
+    transition: 0.4s;
+  }
+
   .reveal-slide {
     opacity: 0;
     transform: translateY(40px);
@@ -122,6 +204,10 @@ html.disable-scrolling {
     &.reveal-del-4,
     .reveal-del-4 {
       transition-delay: 1.3s;
+    }
+
+    .reveal-text{
+      transform: translateY(0%);
     }
 
     .reveal-slide,

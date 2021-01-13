@@ -1,0 +1,36 @@
+.double-image{
+
+  &__inner{
+    margin-top: 30px;
+  
+    @include respond-to(xl){
+      margin-top: 40px;
+    }
+
+    p{
+      font-size: 10px;
+      font-family: 'NeueMachina-Medium';
+      margin-top: 10px;
+    }
+  }
+
+  &__one{
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    @include respond-to(sm){
+      grid-column-start: 2;
+    }
+  }
+
+  &__two{
+    grid-column-start: 7;
+    grid-column-end: 13;
+
+    @include respond-to(sm){
+      grid-column-end: 12;
+
+    }
+  }
+}
+

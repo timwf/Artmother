@@ -1,3 +1,50 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+
+
+@font-face { 
+  font-family: 'LibreBaskerville-Bold';
+  src:  url("../fonts/LibreBaskerville-Bold.ttf")  format("truetype");
+}
+
+@font-face { 
+  font-family: 'LibreBaskerville-Italic';
+  src:  url("../fonts/LibreBaskerville-Italic.ttf")  format("truetype");
+}
+
+@font-face { 
+  font-family: 'LibreBaskerville-Regular';
+  src:  url("../fonts/LibreBaskerville-Regular.ttf")  format("truetype");
+}
+
+
+
+@font-face {
+  font-family: 'NeueMachina-Bold';
+  src:  url("../fonts/NeueMachina-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NeueMachina-Light';
+  src:  url("../fonts/NeueMachina-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NeueMachina-Medium';
+  src:  url("../fonts/NeueMachina-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NeueMachina-Regular';
+  src:  url("../fonts/NeueMachina-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NeueMachina-Ultrabold';
+  src:  url("../fonts/NeueMachina-Ultrabold.otf") format("opentype");
+}
+
+
+
+

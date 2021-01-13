@@ -1,0 +1,11 @@
+.author-copy{
+
+  &__inner{
+
+    p{
+      grid-column-start: 3;
+      grid-column-end: 12;
+      margin-top: 40px;
+    }
+  }
+}

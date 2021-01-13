@@ -1,0 +1,106 @@
+.artist-hero{
+  margin-top: 20px;
+
+  @include respond-to(xl){
+    margin-top: 30px;
+  }
+
+  .animated-line{
+    top: 164px;
+
+    @include respond-to(sm){
+      top: 300px;
+    }
+
+    @include respond-to(xl){
+      top: 350px;
+    }
+
+  }
+
+  &__title{
+
+    h1{
+      font-family: NeueMachina-Bold;
+      color: red;
+      font-size: 56px;
+      line-height: 0.8;
+      text-transform: uppercase; 
+
+      @include respond-to(sm){
+        font-size: 90px;
+      }
+
+      @include respond-to(xl){
+        font-size: 105px;
+      }
+ 
+    }
+  }
+
+  &__name{
+    grid-column-start: 2;
+    grid-column-end: 13;    
+
+    @include respond-to(md){
+      grid-column-start: 1;
+      grid-column-end: 13;  
+    }
+  }
+
+  &__image-text{
+    position: relative;
+    margin-top: 25px;
+
+    @include respond-to(md){
+      margin-top: 0px;
+    }
+  }
+
+
+  &__image-wrap{
+    grid-column-start: 3;
+    grid-column-end: 13;
+
+    @include respond-to(md){
+      grid-column-start: 4;
+      grid-column-end: 9;
+    }
+
+    img{
+      width: 100%;
+      transform: translateX(12px);
+      @include respond-to(md){
+        transform: translateX(0px);
+      }
+    }
+  }
+
+  &__text-wrap{
+    grid-column-start: 2;
+    grid-column-end: 11;
+    display: flex;
+    align-items: center;
+
+    @include respond-to(md){
+      grid-column-start: 9;
+      grid-column-end: 13;
+    }
+
+    @include respond-to(sm){
+      padding-right: 90px;
+    }
+
+    @include respond-to(xl){
+      padding-right: 65px;
+    }
+  }
+
+  h3{
+    margin-top: 25px;
+    @include respond-to(md){
+      margin-top: 0px;
+    }
+  }
+}
+

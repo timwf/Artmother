@@ -1,0 +1,21 @@
+.about-author-heading{
+  margin-top: 44px;
+
+  @include respond-to(sm){
+    margin-top: 73px;
+  }
+
+  @include respond-to(xl){
+    margin-top: 100px;
+  }
+
+  h4{
+    grid-column-start: 2;
+    grid-column-end: 11;
+
+    @include respond-to(sm){
+      grid-column-start: 3;
+      grid-column-end: 10;
+    }
+  }
+}

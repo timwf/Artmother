@@ -2,12 +2,46 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 .page-header {
-  position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+
+  display: none;
+
+  @include respond-to(sm){
+    display: block;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
 
   &__logo {
+  }
+
+  &__nav{
+
+
+    ul{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    li{
+      padding-left: 30px;
+      font-family: 'NeueMachina-Medium';
+      font-size: 14px;
+    }
+
+    a{
+      color: black;
+    }
+
+    svg{
+      height: 36px;
+      margin-top: 6px;
+
+    }
   }
 }
