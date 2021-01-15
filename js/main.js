@@ -202,9 +202,55 @@ $(document).ready(() => {
     }
   }, 500);
 
+  function initHomeLoader(){
+    const svg = $('.loader__inner svg path');
+    const subtitle = $('.loader__sub-heading h2')
+    const wrap = $('.loader')
+
+    if(!wrap.length){
+      return
+    }
+    console.log(subtitle);
+    disableScrolling()
+
+
+    let tl = gsap.timeline();
+    tl.to(svg, {duration: 0.5, stagger: 0.3, opacity: 0.2, scale: 1.05})
+      .to(svg, {duration: 1, stagger: 0.3, opacity: 1, scale: 1.0}, '-=3')
+      .to(subtitle, {duration: 1,  opacity: 1, y: 0}, '+=0')
+      .to(wrap, {duration: 1, onComplete: enableScrolling, opacity: 1, y: '-100%'}, '+=1')
+
+  }
+
+  function initTimeline(){
+    const centerLine = $('.author-timeline__center-line')
+    const verticleLines = $('.author-timeline__leading-line')
+    const date = $('.author-timeline__inner h3')
+
+    
+
+    let tl = gsap.timeline(  {
+      scrollTrigger: {
+        trigger: centerLine,
+        start: 'top 50%',
+        toggleActions: 'play',
+        markers: false
+      }     
+
+    });
+
+    tl.to(centerLine, {duration: 10, stagger: 0.3, height: '100%'})
+      .to(verticleLines, {duration: 1, stagger: 1, scale: 1}, '-=9.2')
+      .to(date, {duration: 1, stagger: 1, opacity: 1, y: 0 }, '-=9.2')
+
+
+  }
+
   /* FUNCTION CALLS */
   /* ============= */
   bindEvents();
+  initHomeLoader()
+  initTimeline()
 
   if (isObserver) {
     $('.js-visibility').each((i, el) => {

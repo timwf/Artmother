@@ -99,6 +99,8 @@ html.disable-scrolling {
 
 .animated-line__container{
   position: relative;
+  // overflow: hidden;
+  height: 31px;
 }
 
 .spacer{
@@ -106,7 +108,7 @@ html.disable-scrolling {
 }
 
 .animated-line{
-  width: 500px;
+  width: 0px;
   height: 6px;
   background-color: #000;
   position: absolute;
@@ -125,8 +127,9 @@ html.disable-scrolling {
 .is-visible{
   &.animated-line-show{
     left: -463px;
+    width: 500px;
     animation-name: show-line;
-    animation-duration: 0.9s;
+    animation-duration: 2s;
     opacity: 1 !important;
 
     @include respond-to(sm){
@@ -163,6 +166,7 @@ html.disable-scrolling {
   .reveal-text{
     transform: translateY(150%);
     transition: 0.4s;
+    // transition-delay: 6.5s;
   }
 
   .reveal-slide {
@@ -173,14 +177,22 @@ html.disable-scrolling {
 
   .reveal-slide-left {
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateY(40px);
     @include transition-reveal;
+
+    @include respond-to(sm){
+      transform: translateX(-40px);
+    }
   }
 
   .reveal-slide-right {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateY(40px);
     @include transition-reveal;
+
+    @include respond-to(sm){
+      transform: translateX(40px);
+    }
   }
 
   .reveal-fade {

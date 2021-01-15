@@ -1,0 +1,49 @@
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+
+  &__inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+
+      @include respond-to(sm){
+        font-size: 32px;
+      }
+    }
+
+    svg{
+      height: 21vw;
+      margin-bottom: 26px;
+
+      @include respond-to(sm){
+        margin-bottom: 0px;
+      }
+    }
+
+    svg path{
+      opacity: 0;
+
+    }
+
+    h2{
+      margin-bottom: 26px;
+    }
+  }
+
+  &__sub-heading{
+    margin-left: 31%;
+
+    h2{
+      opacity: 0;
+      color: $red;
+    }
+  }
+}

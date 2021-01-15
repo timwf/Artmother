@@ -6,9 +6,15 @@
   &__inner{
 
     h3{
+
+
       grid-column-start: 2;
-      grid-column-end: 7;
+      grid-column-end: 12;
       color: $red;
+
+      @include respond-to(sm){
+        grid-column-end: 7;
+      }
     }
   }
 }
