@@ -1,5 +1,10 @@
-mixin author-copy(copy)
+mixin author-copy(copy, img)
   section.author-copy
+    
     .author-copy__inner.grid.container
       each val in copy
+        if img
+          .author-copy__image-wrap
+            img(src=img, alt="Double two" class="js-lightbox")
+            h5 Mud 2005
         p= val

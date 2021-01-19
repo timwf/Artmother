@@ -1,0 +1,17 @@
+- var page = 'About';
+include blocks/blocks
+
+doctype html
+html.no-js.is-observer
+  include components/head.pug
+  body(data-barba="wrapper")
+    include components/header.pug
+    main(data-barba="container" data-barba-namespace="about")
+
+
+
+      
+      
+    include components/lightbox
+    //- include components/loader.pug 
+    include components/footer.pug

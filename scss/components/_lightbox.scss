@@ -1,0 +1,67 @@
+.lightbox{
+  height: 101vh;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: none;
+
+
+
+  &__inner{
+    height: 100%;
+    padding: 15px;
+
+    @include respond-to(sm){
+      padding: 50px;
+    }
+
+
+    p{
+      font-size: 10px;
+      font-family: 'NeueMachina-Medium';
+      margin-top: 10px;
+    }
+
+    img{
+      max-height: 100%;
+      margin: auto;
+    }
+  }
+
+  &__image-wrap{
+    margin: auto;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__close{
+    position: absolute;
+    right: 15px;
+
+    @include respond-to(sm){
+      right: 50px;
+    }
+
+    svg{
+      height: 23px;
+      width: 23px;  
+      fill: $red;
+
+      @include hover{
+        cursor: pointer;
+      }
+    }
+
+
+  }
+}
+
+.js-lightbox:hover{
+  cursor: pointer;
+}

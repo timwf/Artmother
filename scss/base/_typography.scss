@@ -80,6 +80,10 @@ p{
 
 
   @include respond-to(sm){
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  @include respond-to(xl){
+    font-size: 18px;
   }
 }

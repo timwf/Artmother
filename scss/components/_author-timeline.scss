@@ -1,11 +1,16 @@
 .author-timeline{
-  margin-top: 100px;
+  padding-top: 100px;
   position: relative;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   display: none;
 
   @include respond-to(sm){
     display: block;
+    padding-top: 125px;
+  }
+
+  @include respond-to(xl){
+    padding-top: 150px;
   }
 
   &__center-line{
@@ -14,7 +19,7 @@
     border-right: solid $red;
     border-width: 1px;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     
 
     &:before{
@@ -43,6 +48,8 @@
   }
 
   &__inner{
+    position: relative;
+    z-index: 9;
 
     h4, h3{
       font-size: 14px;
@@ -55,7 +62,13 @@
     }
 
     h4:last-of-type{
-      margin-bottom: 14px;
+      margin-bottom: 0px;
+    }
+
+    h5{
+      font-size: 10px;
+      font-family: NeueMachina-Medium;
+      margin-top: 10px;
     }
 
     p{
@@ -75,6 +88,7 @@
     padding-bottom: 10px;
     position: relative;
     transform: scale(0);
+    top: -5px;
   }
 
 
@@ -96,6 +110,7 @@
       width: calc(150% + 68px);
       left: -34px;
       transform-origin: bottom right;
+
     }
   }
 
@@ -182,7 +197,7 @@
   &__row-three-right-text{
     grid-column-start: 9;
     grid-column-end: 11;
-    margin-top: -108px;
+    margin-top: -74px;
 
 
 
@@ -196,8 +211,7 @@
   &__row-three-right-img{
     grid-column-start: 11;
     grid-column-end: 13;
-    margin-top: -108px;
-
+    margin-top: -74px;
   }
 }
 
@@ -213,12 +227,12 @@
 
 .mobile-author-timeline{
 
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   overflow: auto;
   overflow-x: scroll;
   overflow-y: hidden;
-  background-color: #F9F8D0;
+
 
 
   @include respond-to(sm){
@@ -228,10 +242,15 @@
   &__inner{
     width: 1800px;
     margin: 20px;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: #F9F8D0;
 
     p{      
       background-color: #f9f8d0;
       z-index: 9;
+      font-size: 12px;
       padding-bottom: 16px;
       position: relative;
     }
@@ -248,7 +267,14 @@
     }
 
     h4:last-of-type{
-      padding-bottom: 5px;
+      padding-bottom: 0px;
+    }
+
+    
+    h5{
+      font-size: 10px;
+      font-family: NeueMachina-Medium;
+      margin-top: 10px;
     }
   }
 
@@ -267,6 +293,7 @@
 
   &__title{
     display: flex;
+    align-items: center;
     position: absolute;
     top: 0;
 
@@ -281,7 +308,7 @@
       margin-left: -8px;
       height: 28px;
       fill: $red;
-
+      padding-top: 4px;
       animation: arrow 2s infinite
     }
   }
@@ -335,31 +362,57 @@
     grid-column-end: 27;
   }
 
+  &__top-colomn-three-text{
+    grid-column-start: 23;
+    grid-column-end: 28;
+    position: relative;
+  }
+
+  &__top-colomn-three-img{
+    grid-column-start: 23;
+    grid-column-end: 27;
+  }
+
 
 
 
 
   &__bottom-colomn-one-text{
-    grid-column-start: 7;
-    grid-column-end: 15;
+    grid-column-start: 6;
+    grid-column-end: 12;
     position: relative;
   }
 
   &__bottom-colomn-one-img{
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 5;
   }
 
 
   &__bottom-colomn-two-text{
-    grid-column-start: 16;
-    grid-column-end: 22;
+    grid-column-start: 13;
+    grid-column-end: 18;
     position: relative;
   }
 
   &__bottom-colomn-two-img{
-    grid-column-start: 23;
+    grid-column-start: 19;
+    grid-column-end: 24;
+  }
+
+
+  &__bottom-colomn-three-text{
+    grid-column-start: 28;
+    grid-column-end: 32;
+    position: relative;
+  }
+
+  &__bottom-colomn-three-img{
+    grid-column-start: 24;
     grid-column-end: 27;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 

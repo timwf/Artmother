@@ -7,16 +7,16 @@
 
   @include respond-to(sm){
     display: block;
-    position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    background-color: white;
+    transition: 0.4s;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 
-  }
-
-
-  &__logo {
   }
 
   &__nav{
@@ -42,6 +42,88 @@
       height: 36px;
       margin-top: 6px;
 
+    }
+  }
+}
+
+.mobile-page-header{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  bottom: 0;
+
+  @include respond-to(sm){
+    display: none;
+  }
+
+
+  &__buttons{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    svg{
+      height: 36px;
+    }
+  }
+
+  &__hamburger{
+    margin-top: 8px;
+    margin-right: 11px;
+
+    &.active{
+
+      .mobile-page-header__line:first-of-type{
+        margin: 10px 0px -8px 0px;
+        transform: rotate(-45deg);
+
+      }
+      .mobile-page-header__line:nth-of-type(2){
+        opacity: 0;
+      }
+      .mobile-page-header__line:last-of-type{
+        margin: -8px 0px 6px 0px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+
+  &__line{
+    height: 2px;
+    width: 35px;
+    margin: 6px 0;
+    background-color: #000;
+    transition: transform 0.4s;
+  }
+
+  &__menu{
+    width: 62%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 132px;
+    padding-top: 39px;
+    background-color: #ffffffbf;
+    backdrop-filter: blur(5px);
+    transform: translate(101%, 0px);
+    transition: 0.4s;
+
+    &.active{
+      transform: translate(0%, 0px);
+    }
+
+    li{
+      padding-left: 30px;
+      font-family: NeueMachina-Medium;
+      font-size: 14px;
+      padding-bottom: 33px;
+      color: black;
+    }
+
+    a{
+      color: black;
     }
   }
 }

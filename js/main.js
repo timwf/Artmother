@@ -1,4 +1,41 @@
 $(document).ready(() => {
+
+  function animateFadeIn(){
+    let isObserver = true;
+    let observer;
+    // let controller = new ScrollMagic.Controller();
+    let isTouch;
+  
+    if (
+      !('IntersectionObserver' in window) ||
+      !('IntersectionObserverEntry' in window) ||
+      !('isIntersecting' in window.IntersectionObserverEntry.prototype)
+    ) {
+      isObserver = false;
+      $('html').removeClass('is-observer');
+    }
+  
+    if (isObserver) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: '0px 0px -15% 0px' }
+      );
+    }
+  
+    if (isObserver) {
+      $('.js-visibility').each((i, el) => {
+        observer.observe(el);
+      });
+    }
+  }
+  
   let wWidth = $(window).width();
   let navState = false;
   const $header = $('.page-header');
@@ -194,6 +231,7 @@ $(document).ready(() => {
     });
   }
 
+
   const doneResizing = debounce(() => {
     const width = $(window).width();
 
@@ -202,15 +240,81 @@ $(document).ready(() => {
     }
   }, 500);
 
+  function header(){
+    const header = $('.page-header');
+    let scrollHeight = $(document).scrollTop();
+
+    if(!$(header).length){
+      return;
+    }
+
+
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+          $(header).css("transform", "translate(0px, -120px)")
+      } else {
+        $(header).css("transform", "translate(0px, 0px)")
+      }
+      lastScrollTop = st;
+
+      if (st < 100){
+        $(header).css("transform", "translate(0px, 0px)")   
+      }
+    });
+  }
+
+  function mobileMenu(){
+    const btn = $('.mobile-page-header__hamburger')
+    const menu = $('.mobile-page-header__menu')
+
+    if(!$(menu).length){
+      return;
+    }
+
+    $(btn).on('click', function(){
+      $(menu).toggleClass('active')
+      
+      if ($(menu).hasClass('active')){
+        disableScrolling() 
+        $(btn).addClass('active')
+      }
+      else{
+        enableScrolling()
+        $(btn).removeClass('active')
+      }      
+    })
+
+
+  }
+
   function initHomeLoader(){
     const svg = $('.loader__inner svg path');
     const subtitle = $('.loader__sub-heading h2')
     const wrap = $('.loader')
+    console.log('homeloader');
+
+
+
+    if(homeLoaded == false){
+      const line = $('.artist-hero .animated-line-show')
+      const title = $('.artist-hero__title h1')
+
+      $(title).addClass('delay')
+      $(line).css("animation-delay", "5.5s")     
+      homeLoaded = true
+    }
+    
+
+    if(!$(subtitle).length){
+      console.log('not found');
+      return;
+    }
 
     if(!wrap.length){
       return
     }
-    console.log(subtitle);
     disableScrolling()
 
 
@@ -227,6 +331,10 @@ $(document).ready(() => {
     const verticleLines = $('.author-timeline__leading-line')
     const date = $('.author-timeline__inner h3')
 
+    if(!$(centerLine).length){
+      return;
+    }
+
     
 
     let tl = gsap.timeline(  {
@@ -239,18 +347,249 @@ $(document).ready(() => {
 
     });
 
-    tl.to(centerLine, {duration: 10, stagger: 0.3, height: '100%'})
+    tl.to(centerLine, {duration: 10, stagger: 0.3, height: '90%'})
       .to(verticleLines, {duration: 1, stagger: 1, scale: 1}, '-=9.2')
       .to(date, {duration: 1, stagger: 1, opacity: 1, y: 0 }, '-=9.2')
-
-
   }
+
+  function initAuthorVideoZoom(){
+    const video = $('.full-width-video__video-container video');
+    let scale = 0
+
+    if(!$(video).length){
+      return;
+    }
+
+    $(window).scroll(function(){
+      var scrollPos = $(document).scrollTop();
+
+      if(scrollPos < 900){
+        scale = Math.abs(scrollPos - 1000)
+      }    
+      
+      $(video).css("transform", `scale(1.${scale})`)
+    });
+  }
+
+  function initLightbox(){
+    const image = $('.js-lightbox')
+    const lightbox = $('.lightbox')
+    const close = $('.lightbox__close svg')
+
+    if(!$(image).length){
+      return;
+    }
+
+    $(image).on('click', function(){ 
+      let showImage = $(this).attr('src')
+      let src = $(lightbox).find('img')[0]
+      let caption = $(this).attr('alt')
+      
+      $(lightbox).find('p').text(caption)
+      $(src).attr("src", showImage)
+      disableScrolling()      
+      $(lightbox).fadeIn()
+    })
+
+    $(close).on('click', function(){
+      $(lightbox).fadeOut()
+      enableScrolling()
+    })
+  }
+
+  function initVideoControls(){
+    const play = $('.full-width-video__play')
+    const pause = $('.full-width-video__pause')
+    const video = $('.full-width-video__video-container video')
+    let timeoutid = 0;
+
+    if(!$(play).length){
+      return;
+    }
+
+    function myFunctionToHideMenu(){
+      $(pause).hide()
+    }
+    
+
+    $(play).on('click', function(){
+      $(video)[0].play()
+      $(play).hide()
+      $(pause).show()
+
+      $(video).mousemove(function(event){
+        $(pause).show()
+        clearTimeout(timeoutid);
+        timeoutid = setTimeout(myFunctionToHideMenu, 1000);
+      })
+    })
+
+    $(pause).on('click', function(){
+      $(video)[0].pause()
+      $(play).show()
+      $(pause).hide()
+
+      $(video).mousemove(function(event){
+        $(pause).hide()
+      })
+    })
+  }
+
+  function initBarba(){
+
+    function delay(n) {
+      n = n || 2000;
+      return new Promise((done) => {
+          setTimeout(() => {
+              done();
+          }, n);
+      });
+  }
+
+    function pageTransition(){
+      const transition = $('.page-tranition')
+
+      let tl = gsap.timeline();
+      tl.to(transition, {duration: 0.4, stagger: 0.3, opacity: 1, x: 0})
+    }
+
+    function contentAnimation() {
+      const transition = $('.page-tranition')
+
+      let tl = gsap.timeline();
+      tl.to(transition, {duration: 0.2, stagger: 0.3, opacity: 1, x: "100%"})
+    } 
+
+
+
+
+    barba.init({
+      sync: true,
+      debug: true,
+
+    transitions: [
+        {
+            async leave(data) {
+                const done = this.async();
+                pageTransition();
+                await delay(1000);
+                done();
+            },
+
+            async enter(data) {
+              contentAnimation();  
+              initAll() 
+          },
+
+          async once(data) {
+              contentAnimation();
+          },
+        },
+      ],
+    });
+  }
+
+  function initArtistSearch(){
+    let searchTerm = ""
+    const searchGrid = $('.artists__grid')
+    const searchIcon = $('.artists__search-bar svg')
+    enableScrolling()
+
+    if(!$(searchGrid).length){
+      return
+    }
+
+    $('#artists__search-input').focus(function(){
+      $(searchIcon).hide()
+    });
+
+    $('#artists__search-input').on('keyup', function() {
+      let searchString = $(this).val();
+      searchTerm = searchString
+      artistList.search(searchString);
+
+      if(searchString == ""){
+        $(searchIcon).show()
+      }
+      else{
+        $(searchIcon).hide()
+      }
+    });
+
+    var artistList = new List('artist__search', { 
+      valueNames: ['artist-name']
+    });
+
+
+    artistList.on('searchComplete', function (e) {
+      if (e.matchingItems.length == 0) {    
+       $(searchGrid).append(`sorry ${searchTerm} not found`)
+    
+      } else {    
+      }    
+    });
+  }
+
+  function initArtGrid(){    
+    function resizeGridItem(item){
+      const artGrid = $('.art__grid')
+
+      if(!$(artGrid).length){
+        return;
+      }
+
+      grid = document.getElementsByClassName("art__grid")[0];
+      rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+      rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+      rowSpan = Math.ceil((item.querySelector('.art__img-container').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+      item.style.gridRowEnd = "span "+rowSpan;
+    }
+    
+    function resizeAllGridItems(){
+      allItems = document.getElementsByClassName("art__item");
+      for(x=0;x<allItems.length;x++){
+        resizeGridItem(allItems[x]);
+      }
+    }
+    
+    function resizeInstance(instance){
+      item = instance.elements[0];
+      resizeGridItem(item);
+    }
+    
+    window.onload = resizeAllGridItems();
+    window.addEventListener("resize", resizeAllGridItems);    
+    allItems = document.getElementsByClassName("art__item");
+    for(x=0;x<allItems.length;x++){
+      imagesLoaded( allItems[x], resizeInstance);
+    }
+  }
+
+
 
   /* FUNCTION CALLS */
   /* ============= */
-  bindEvents();
-  initHomeLoader()
-  initTimeline()
+  let homeLoaded = false
+  initAll()
+  initBarba()
+
+  function initAll(){
+    console.log('initall');
+    animateFadeIn()
+    enableScrolling()
+    bindEvents();
+    initHomeLoader()
+    initTimeline()
+    initAuthorVideoZoom()
+    initLightbox()
+    initVideoControls()
+    header()
+    mobileMenu()
+    initArtistSearch()
+    initArtGrid()
+  }
+
+  
 
   if (isObserver) {
     $('.js-visibility').each((i, el) => {

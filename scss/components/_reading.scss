@@ -1,0 +1,31 @@
+.reading{
+  padding-top: 80px;
+  background-color: white;
+  
+  h3{
+    grid-column-start: 3;
+    grid-column-end: 12;
+    margin-bottom: 5px;
+  }
+
+  img{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @include respond-to(sm){
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+  }
+
+  p{
+    grid-column-start: 3;
+    grid-column-end: 12;
+  }
+
+  span{
+    color: $red;
+    font-style: italic;
+  }
+
+}

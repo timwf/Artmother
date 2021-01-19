@@ -1,11 +1,36 @@
 .author-copy{
 
+  &__image-wrap{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: -12px;
+    width: calc(100% + 12px);
+    padding-top: 40px;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+
+    @include respond-to(md){
+      margin-top: 0px;
+      margin-left: 0px;
+      width: calc(100%);
+    }
+
+  }
+
   &__inner{
+    position: relative;
 
     p{
       grid-column-start: 3;
       grid-column-end: 12;
       margin-top: 40px;
+    }
+
+    h5{
+      font-size: 10px;
+      font-family: NeueMachina-Medium;
+      margin-top: 10px;
     }
   }
 }

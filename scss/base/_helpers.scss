@@ -100,11 +100,13 @@ html.disable-scrolling {
 .animated-line__container{
   position: relative;
   // overflow: hidden;
+  background-color: white;
   height: 31px;
 }
 
 .spacer{
   height: 500px;
+  background-color: white;
 }
 
 .animated-line{
@@ -129,7 +131,7 @@ html.disable-scrolling {
     left: -463px;
     width: 500px;
     animation-name: show-line;
-    animation-duration: 2s;
+    animation-duration: 1s;
     opacity: 1 !important;
 
     @include respond-to(sm){

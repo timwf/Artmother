@@ -1,12 +1,13 @@
 .about-author-heading{
-  margin-top: 44px;
+  padding-top: 20px;
+  padding-bottom: 15px;
 
   @include respond-to(sm){
-    margin-top: 73px;
+    padding-top: 16px;
   }
 
   @include respond-to(xl){
-    margin-top: 100px;
+    padding-top: 20px;
   }
 
   h4{

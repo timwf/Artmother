@@ -1,8 +1,20 @@
 .artist-hero{
-  margin-top: 20px;
+  position: fixed;
+  top: 0px;
+  z-index: -1;
+  width: 100%;
+
+  @include respond-to(sm){
+    margin-top: 20px;
+    top: 66px;
+  }
 
   @include respond-to(xl){
     margin-top: 30px;
+  }
+
+  &__height{
+    height: 100vh;
   }
 
   .animated-line{
@@ -15,18 +27,23 @@
     @include respond-to(xl){
       top: 350px;
     }
-
   }
 
   &__title{
+
+    .delay{
+        transition-delay: 6.5s !important;      
+    }
+
+
 
     h1{
       font-family: NeueMachina-Bold;
       color: red;
       font-size: 56px;
-      line-height: 0.8;
+      line-height: 0.95;
       text-transform: uppercase; 
-      transition-delay: 6.5s !important;
+
 
       @include respond-to(sm){
         font-size: 90px;
@@ -54,6 +71,7 @@
 
     @include respond-to(md){
       margin-top: 0px;
+
     }
   }
 
@@ -61,15 +79,24 @@
   &__image-wrap{
     grid-column-start: 3;
     grid-column-end: 13;
+    height: calc(100vh - 281px);
 
     @include respond-to(md){
       grid-column-start: 4;
       grid-column-end: 9;
+      height: calc(100vh - 320px);
+    }
+
+    @include respond-to(xl){
+      height: calc(100vh - 365px);
     }
 
     img{
-      width: 100%;
+      height: 100%;
+      float: right;
       transform: translateX(12px);
+      height: 100%;
+
       @include respond-to(md){
         transform: translateX(0px);
       }
@@ -109,5 +136,9 @@
     animation-delay: 5s;
     animation-duration: 2s;
   }
+}
+
+.artist-hero__second-name.delay{
+  transition-delay: 6.8s !important;
 }
 
