@@ -10,18 +10,35 @@
     grid-column-end: 12;
     color: red;
     font-family: 'NeueMachina-Medium';
+    padding-bottom: 12px;
+
+
+    @include respond-to(sm){
+      padding-bottom: 30px;
+
+    }
+  }
+
+  h5{
+    padding-top: 2px;
+
+    @include respond-to(sm){
+      padding-top: 10px;
+    }
+
+    @include respond-to(xl){
+      font-size: 18px;
+    }
   }
 
   &__search-bar{
     grid-column-start: 1;
     grid-column-end: 7;
-    padding-top: 12px;
     position: relative;
 
     @include respond-to(sm){
       grid-column-start: 1;
       grid-column-end: 4;
-      padding-top: 30px;
     }
 
     input{
@@ -35,9 +52,13 @@
 
     svg{
       position: absolute;
-      top: 38px;
+      top: 11px;
       left: -23px;
       height: 15px;
+
+      @include respond-to(sm){
+        top: 8px;
+      }
     }
   }
 

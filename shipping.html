@@ -18,7 +18,7 @@
           <ul>
                 <li><a href="/files/about.html">About</a></li>
                 <li><a href="/files/artists.html">Artists</a></li>
-                <li class="current-menu-item"><a href="/files/art.html">Art</a></li>
+                <li><a href="/files/art.html">Art</a></li>
                 <li><a href="/files/shipping.html">Shipping</a></li>
                 <li><a href="/files/index.html">Contact us</a></li>
                 <li><a href="/files/index.html">Sign up</a></li>
@@ -33,7 +33,7 @@
           <ul>
                 <li><a href="/files/about.html">About</a></li>
                 <li><a href="/files/artists.html">Artists</a></li>
-                <li class="current-menu-item"><a href="/files/art.html">Art</a></li>
+                <li><a href="/files/art.html">Art</a></li>
                 <li><a href="/files/shipping.html">Shipping</a></li>
                 <li><a href="/files/index.html">Contact us</a></li>
                 <li><a href="/files/index.html">Sign up</a></li>
@@ -48,141 +48,36 @@
         </div>
       </div>
     </header>
-    <main data-barba="container" data-barba-namespace="art">
-      <section class="artists">
-        <div class="artists__inner grid container">
-          <h1>Artworks</h1>
-          <div class="artists__search-bar">
-            <input id="art__search-input" type="text"><svg xmlns="http://www.w3.org/2000/svg" width="84" height="86" viewBox="0 0 84 86"><g><g><path d="M54.574 62.184a34.048 34.048 0 0 1-20.391 6.74c-18.88 0-34.186-15.296-34.186-34.164C-.003 15.89 15.302.594 34.183.594c18.88 0 34.187 15.297 34.187 34.166 0 8.153-2.858 15.639-7.627 21.512l21.408 22.523a4.269 4.269 0 0 1-.155 6.038 4.275 4.275 0 0 1-6.042-.155zm5.249-27.424c0-14.152-11.48-25.624-25.64-25.624S8.543 20.608 8.543 34.76c0 14.151 11.48 25.623 25.64 25.623s25.64-11.472 25.64-25.623z"/></g></g></svg>
+    <main data-barba="container" data-barba-namespace="shipping">
+      <section class="shipping">
+        <div class="shipping__inner grid container">
+          <div class="shipping__heading js-visibility reveal-slide">
+            <h2>You’ve found a work on artmother that you’d love to acquire… so what are the next steps?</h2>
           </div>
-          <div class="art__options">
-            <div class="art__filter btn">
-              <p>Filter</p>
-            </div>
-            <div class="art__sort btn">
-              <p>Sort</p>
-            </div>
+          <div class="shipping__row-one">
+            <div class="shipping__text-wrap">
+              <h3>1.The shipping option:</h3>
+              <p>The ‘shipping options’ button alongside each published artwork lets you choose the next steps. One option is to supply the postcode to which you’d like the work shipped – this information is automatically sent to our team, who will respond immediately with the shipping cost and delivery schedule. We’re here to accommodate you, so if you’d like to arrange your own shipping or collect the work yourself, we can organise that too</p>
+            </div><img class="js-lightbox" src="./img/double-one.jpg" alt="Double two">
           </div>
-        </div>
-        <div class="art__filter-conatainer container">
-          <div class="art__filter-item">
-            <h1>medium</h1>
-            <div class="art__filter-medium art__filter-radios" data-category="medium">
-              <div class="art__filter-radio-container">
-                <input type="radio" id="all medium" name="medium" all="true" checked>
-                <label for="all medium">All</label>
-              </div>
+          <div class="shipping__row-two"><img class="js-lightbox" src="./img/double-two.jpg" alt="Double two">
+            <div class="shipping__text-wrap">
+              <h3>2. Packing:</h3>
+              <p>Once you’ve chosen a shipping option and purchased the work, we ensure that it is packed safely and securely ready for shipping collection.      </p>
             </div>
           </div>
-          <div class="art__filter-item">
-            <h1>price</h1>
-            <div class="art__filter-price art__filter-radios" data-category="price">
-              <div class="art__filter-radio-container">
-                <input type="radio" id="all price" name="price" all="true" checked>
-                <label for="all price">All      </label>
-              </div>
+          <div class="shipping__row-three">
+            <div class="shipping__text-wrap">
+              <h3>3. Your work is shipped:</h3>
+              <p>artmother’s shipping partner is xxx, one of the world’s leading specialist art shippers. If you choose to arrange shipping through us, xxx will ensure the safe and secure transport of the work to your chosen destination. Should anything unthinkable happen during this process, your work is fully insured. </p>
+            </div><img class="js-lightbox" src="./img/double-one.jpg" alt="Double two">
+          </div>
+          <div class="shipping__row-four"><img class="js-lightbox" src="./img/double-two.jpg" alt="Double two">
+            <div class="shipping__text-wrap">
+              <h3>4. Installation and aftercare:</h3>
+              <p>The work is all yours. Remember that we also offer further services, such as expert installation and advisory for any future acquisitions. Feel free to contact us to discuss.      </p>
             </div>
           </div>
-          <div class="art__filter-item">
-            <h1>size</h1>
-            <div class="art__filter-size art__filter-radios" data-category="size">
-              <div class="art__filter-radio-container">
-                <input type="radio" id="all size" name="size" all="true" checked>
-                <label for="all size">All</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="art__sort-conatainer container">
-          <div class="art__sort-options">
-            <p>- Default</p>
-            <p>- Price ascending</p>
-            <p>- Price descending</p>
-            <p>- Earliest work first</p>
-            <p>- Latest work first</p>
-          </div>
-        </div>
-        <div id="items">   
-          <ul class="art__grid grid container list"> 
-            <li class="art__item" data-medium="Painting" data-price="under £1k" data-size="under 50cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-one.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith</h5>
-              </div>
-            </li>
-            <li class="art__item" data-medium="Photography" data-price="£1k to £5k" data-size="50 - 100cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/art-one.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith</h5>
-              </div>
-            </li>
-            <li class="art__item" data-medium="Prints" data-price="£5k to £10k" data-size="over 100cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/art-two.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith                     </h5>
-              </div>
-            </li>
-            <li class="art__item" data-medium="Sculpture" data-price="£10k to £25k" data-size="under 50cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-three.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith</h5>
-              </div>
-            </li>
-            <li class="art__item" data-medium="Painting" data-price="£1k to £5k" data-size="under 50cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-five.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith                </h5>
-              </div>
-            </li>
-            <li class="art__item" data-medium="Photography" data-price="£10k to £25k" data-size="under 50cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-six.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith        </h5>
-              </div>
-            </li>
-            <li class="art__item" data-medium="Painting" data-price="£10k to £25k" data-size="over 100cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-one.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith</h5>
-              </div>
-            </li>
-            <li class="art__item" data-medium="Prints" data-price="£10k to £25k" data-size="under 50cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/art-two.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith </h5>
-              </div>
-            </li>
-            <li class="art__item" data-medium="Sculpture" data-price="£5k to £10k" data-size="50 - 100cm">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/art-one.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith                              </h5>
-              </div>
-            </li>
-            <li class="art__item">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-three.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith</h5>
-              </div>
-            </li>
-            <li class="art__item">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-five.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith                </h5>
-              </div>
-            </li>
-            <li class="art__item">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-six.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith</h5>
-              </div>
-            </li>
-            <li class="art__item">
-              <div class="content">
-                <div class="art__img-container"><img class="js-lightbox" src="./img/artist-three.jpg" alt="Double two"></div>
-                <h5 class="art-name">Patrick Smith</h5>
-              </div>
-            </li>
-          </ul>
         </div>
       </section>
     </main>

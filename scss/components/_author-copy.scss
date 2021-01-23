@@ -1,14 +1,39 @@
 .author-copy{
 
   &__image-wrap{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    margin-left: -22%;
+    width: 70%;
+    float: left;
+    margin-right: 16px;
+
+    @include respond-to(sm){
+      width: 39%;
+      margin-right: 29px;
+    }
+  }
+
+  &__image-wrap--right{
+    margin-left: 16px;
+    width: 70%;
+    float: right;
+    margin-right: calc(-12% + -10px);
+
+    @include respond-to(sm){
+      width: 39%;
+      margin-left: 29px;
+    }
+  }
+
+  &__wrap{
+    grid-column-start: 3;
+    grid-column-end: 12;
     margin-left: -12px;
     width: calc(100% + 12px);
     padding-top: 40px;
-    position: absolute;
     z-index: 9;
     top: 0;
+
+
 
     @include respond-to(md){
       margin-top: 0px;
@@ -24,7 +49,7 @@
     p{
       grid-column-start: 3;
       grid-column-end: 12;
-      margin-top: 40px;
+      margin-bottom: 40px;
     }
 
     h5{

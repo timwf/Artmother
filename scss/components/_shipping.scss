@@ -1,0 +1,139 @@
+.shipping{
+  padding-top: 40px;
+
+  @include respond-to(sm){
+    padding-top: 130px;
+  }
+
+  
+
+  &__inner{
+    grid-row-gap: 14px;
+
+    img{
+      width: 65%;
+
+      @include respond-to(sm){
+        width: 100%;
+      }
+    }
+
+    h3{
+      color: black;
+      font-family: NeueMachina-Bold;
+      padding-bottom: 10px;
+    }
+
+    h2{
+      font-size: 24px;
+
+      @include respond-to(sm){
+        font-size: 32px;
+      }
+
+      @include respond-to(xl){
+        font-size: 34px;
+      }
+    }
+  }
+
+  &__heading{
+    grid-column-start: 2;
+    grid-column-end: 12;
+
+    @include respond-to(sm){
+      grid-column-start: 4;
+      grid-column-end: 13;
+    }
+  }
+
+  &__row-one{
+    grid-column-start: 3;
+    grid-column-end: 12;   
+    display: flex;
+    flex-direction: column-reverse; 
+
+
+    @include respond-to(sm){
+      flex-direction: column;
+      grid-column-start: 1;
+      grid-column-end: 4; 
+      grid-row-start: 1;
+      grid-row-end: 3;
+      align-self: end;
+    }
+
+    img{
+      margin: 10px 0px;
+
+      @include respond-to(sm){
+        margin: 0px;
+        margin-top: 20px;
+      }      
+    }
+  }
+
+  &__row-two{
+    grid-column-start: 3;
+    grid-column-end: 12; 
+
+    @include respond-to(sm){
+      grid-column-start: 4;
+      grid-column-end: 7;  
+      align-self: end;
+    }
+
+    img{
+      margin: 10px 0px;
+
+      @include respond-to(sm){
+        margin: 0px;
+        margin-bottom: 20px;
+      }        
+    }
+  }
+
+  &__row-three{
+    grid-column-start: 3;
+    grid-column-end: 12; 
+    display: flex;
+    flex-direction: column-reverse; 
+
+    @include respond-to(sm){
+      flex-direction: column;
+      grid-column-start: 7;
+      grid-column-end: 10;  
+      align-self: end;
+    }
+
+    img{
+      margin: 10px 0px;
+
+      @include respond-to(sm){
+        margin: 0px;
+        margin-top: 20px;
+      }   
+    }
+  }
+
+  &__row-four{
+    grid-column-start: 3;
+    grid-column-end: 12; 
+
+    @include respond-to(sm){
+      grid-column-start: 10;
+      grid-column-end: 13;  
+      align-self: end;
+    }
+
+    img{
+      margin: 10px 0px;
+
+      @include respond-to(sm){
+        margin: 0px;
+        margin-bottom: 20px;
+      }  
+    }
+  }
+
+}

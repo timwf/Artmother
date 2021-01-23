@@ -1,10 +1,11 @@
-mixin author-copy(copy, img)
-  section.author-copy
-    
+mixin author-copy(copy, img, right)
+  section.author-copy    
     .author-copy__inner.grid.container
-      each val in copy
+      .author-copy__wrap
         if img
-          .author-copy__image-wrap
+        .author-copy__image-wrap(class=right ? 'author-copy__image-wrap--right js-visibility reveal-slide-right' : 'js-visibility reveal-slide-left')
+          if img
             img(src=img, alt="Double two" class="js-lightbox")
             h5 Mud 2005
-        p= val
+        each val in copy          
+          p= val

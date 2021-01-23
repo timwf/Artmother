@@ -259,7 +259,7 @@ $(document).ready(() => {
       }
       lastScrollTop = st;
 
-      if (st < 100){
+      if (st < 20){
         $(header).css("transform", "translate(0px, 0px)")   
       }
     });
@@ -275,6 +275,7 @@ $(document).ready(() => {
 
     $(btn).on('click', function(){
       $(menu).toggleClass('active')
+      console.log('clicked');
       
       if ($(menu).hasClass('active')){
         disableScrolling() 
@@ -293,7 +294,7 @@ $(document).ready(() => {
     const svg = $('.loader__inner svg path');
     const subtitle = $('.loader__sub-heading h2')
     const wrap = $('.loader')
-    console.log('homeloader');
+
 
 
 
@@ -455,6 +456,8 @@ $(document).ready(() => {
 
     function contentAnimation() {
       const transition = $('.page-tranition')
+      $('.mobile-page-header__menu').removeClass('active')
+      $('.mobile-page-header__hamburger').removeClass('active')
 
       let tl = gsap.timeline();
       tl.to(transition, {duration: 0.2, stagger: 0.3, opacity: 1, x: "100%"})
@@ -565,6 +568,148 @@ $(document).ready(() => {
     }
   }
 
+  function updateArtRadios(visibleItems){
+    let mediumArr = []
+    let sizeArr = []
+    let priceArr = []
+    const container = $('.art__filter-radios')
+
+    $(visibleItems).each(function(){
+      mediumArr.push(this.values().medium) 
+      sizeArr.push(this.values().size)  
+      priceArr.push(this.values().price)
+    })
+
+    function removeDulpicates(set){
+      let uniqueMedium = new Set(set)
+      return [...uniqueMedium]
+    }
+
+    function appendRadios(arr, container){
+      $(arr).each(function(){
+        let wrap = '.art__filter-'+ container
+
+        if(this != window){
+          $(wrap).append(`
+          <div class="art__filter-radio-container">
+            <input type="radio" id="${this}" name="${container}" >
+            <label for="${this}">${this}</label>
+          </div>
+          `)  
+        }
+      })  
+    }
+
+    appendRadios(removeDulpicates(mediumArr), 'medium')
+    appendRadios(removeDulpicates(priceArr), 'price')
+    appendRadios(removeDulpicates(sizeArr), 'size')
+
+
+  }
+
+
+
+  function initArtFilter(){
+    const filterBtn = $('.art__filter')
+    const sortBtn = $('.art__sort')
+    const filterContainer = $('.art__filter-conatainer')
+    const sortContainer = $('.art__sort-conatainer')
+
+    $(filterBtn).on('click', function(){
+      $(sortContainer).removeClass('active')
+      $(sortBtn).removeClass('active')
+      $(filterContainer).toggleClass('active')
+      $(this).toggleClass('active')
+    })
+
+    $(sortBtn).on('click', function(){
+      $(filterContainer).removeClass('active')
+      $(filterBtn).removeClass('active')
+      $(sortContainer).toggleClass('active')
+      $(this).toggleClass('active')
+    })
+
+    var sortList = new List('items', { valueNames: [
+      { data: ['price'] },
+      { data: ['medium'] },
+      { data: ['size'] },    
+    ] });  
+
+    updateArtRadios(sortList.items)
+
+    function updateList(){
+      let values_medium = $("input[name=medium]:checked").attr('id')
+      let values_size = $("input[name=size]:checked").attr('id')
+      let values_price = $("input[name=price]:checked").attr('id')    
+
+      sortList.filter(function (item) {
+        var mediumFilter = false;
+        var sizeFilter = false;
+        let priceFilter = false
+
+        
+        if(values_medium == null || values_medium == "all medium")
+        { 
+          mediumFilter = true;
+        } else {
+          mediumFilter = item.values().medium == values_medium;          
+        }
+
+        if(values_size == null || values_size == "all size")
+        { 
+          sizeFilter = true;
+        } else {
+          sizeFilter = item.values().size == values_size;
+        }
+
+        if(values_price == null || values_price == "all price")
+        { 
+          priceFilter = true;
+        } else {
+          priceFilter = item.values().price == values_price;
+        }        
+
+        return mediumFilter && sizeFilter && priceFilter
+      });
+
+      let visibleItems = sortList.visibleItems
+
+      let medium = $('.art__filter-medium input')
+      let price = $('.art__filter-price input')
+      let size = $('.art__filter-size input')
+      let thisCategory = $(this).parent().parent().attr('data-category')
+
+
+
+      function hideUnavlaibleRadios(catgory){        
+        let name = $(catgory).attr('name')
+          let x = this
+          
+          $(catgory).each(function(){
+            if($(this).attr('all') != "true"){
+              $(this).parent().hide()
+            }            
+          })
+          $(catgory).each(function(){
+            let x = this
+            $(visibleItems).each(function(){    
+              if($(x).attr('id') == this.values()[name]){
+                $(x).parent().show()
+              }
+            })
+          })  
+      }
+
+      hideUnavlaibleRadios(medium)
+      hideUnavlaibleRadios(price)
+      hideUnavlaibleRadios(size)
+    }
+
+    $('input[name=medium]').change(updateList);
+    $('input[name=size]').change(updateList);
+    $('input[name=price]').change(updateList);
+  }
+
 
 
   /* FUNCTION CALLS */
@@ -572,7 +717,7 @@ $(document).ready(() => {
   let homeLoaded = false
   initAll()
   initBarba()
-
+  mobileMenu()
   function initAll(){
     console.log('initall');
     animateFadeIn()
@@ -584,9 +729,10 @@ $(document).ready(() => {
     initLightbox()
     initVideoControls()
     header()
-    mobileMenu()
+
     initArtistSearch()
     initArtGrid()
+    initArtFilter()
   }
 
   
