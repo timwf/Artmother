@@ -4,45 +4,46 @@ include blocks/blocks
 doctype html
 html.no-js.is-observer
   include components/head.pug
-  body(data-barba="wrapper")
+  body
     include components/header.pug
-    main(data-barba="container" data-barba-namespace="home")
-      include components/artist-hero.pug 
-      include components/full-width-video.pug 
-      include components/about-author-heading.pug 
-      include components/double-image.pug 
-      +author-copy(['Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything the space between things, all in one, which makes it feel like her paintings vibrate with captured time.', '“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things aand the space between things, all in one, which makes it feel like her paintings vibrate with captured time.'])
-      +author-quote('“Visual perception, as we know, is unstable: If you look at something long enough, its appearance begins to shift.”')
-      +author-copy(['Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.', '“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.', ])
-      +author-quote('“Each time you remember something, you’re not being teleported to the past—you physically experiencing it in the present.')
-      +author-copy(['Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.', '“That echo between those two moments – the memory and the present - means that the time between them collapses. For me, that resonates fully with the space of a painting because everything’s happening at once.”'])
-      .animated-line__container
-        .animated-line.js-visibility.animated-line-show  
-      +author-quote('It all began here. Treib talks to JJ Smith about her nomadic upbringing')
-   
-      //- include components/multiple-images.pug
-      +author-copy(['We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.', 'We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.'], './img/double-one.jpg')
-      +author-copy(['When I was around five, my mom wanted us to live in the country, so she and my father decided to get a place that was about a half hour outside of Saginaw. It was isolated farm country. We had this double life—we would live out there on weekends, and during the week we commuted to city schools. Both my parents worked in the city. Then we would drive back at night in the dark. I have so many memories of just being in the car. We moved back to the city when I was twelve. My mother was worried that we we barefoot, but when we moved back'])
-      +author-copy(['We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.', 'My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.'], './img/double-one.jpg', 'right')
-      +author-copy(['When I was around five, my mom wanted us to live in the country, so she and my father decided to get a place that was about a half hour outside of Saginaw. It was isolated farm country. We had this double life—we would live out there on weekends, and during the week we commuted to city schools. Both my parents worked in the city. Then we would drive back at night in the dark. I have so many memories of just being in the car. We moved back to the city when I was twelve. My mother was worried that we we barefoot, but when we moved back'])
-      section.reading
+    main-wrap(data-barba="wrapper")
+      main(data-barba="container" data-barba-namespace="home")
+        include components/artist-hero.pug 
+        include components/full-width-video.pug 
+        include components/about-author-heading.pug 
+        include components/double-image.pug 
+        +author-copy(['Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything the space between things, all in one, which makes it feel like her paintings vibrate with captured time.', '“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things aand the space between things, all in one, which makes it feel like her paintings vibrate with captured time.'])
+        +author-quote('“Visual perception, as we know, is unstable: If you look at something long enough, its appearance begins to shift.”')
+        +author-copy(['Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.', '“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.', ])
+        +author-quote('“Each time you remember something, you’re not being teleported to the past—you physically experiencing it in the present.')
+        +author-copy(['Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.', '“That echo between those two moments – the memory and the present - means that the time between them collapses. For me, that resonates fully with the space of a painting because everything’s happening at once.”'])
         .animated-line__container
           .animated-line.js-visibility.animated-line-show  
-        .reading__inner.container.grid
-          h3.js-visibility.reveal-slide Reading 
-          img(src="./img/book.jpg", alt="Double two" class="js-lightbox")
-          p 
-           span Marcel Proust ‘In Search of Lost Time’  
-            |   “I was struck by Proust’s conception of involuntary memory that he contrasts to voluntary memory. He compares voluntary memory to looking through pages of a photo album: Yes, that was me at that time. Involuntary memory, for him, is a physical sensation, a sense perception, smell and taste being the most ephemeral and 
-      section.reading
-        .reading__inner.container.grid
-          h3.js-visibility.reveal-slide  Listening 
-          p 
-            span Prince, ‘Dancing Close and Slow’ 
-            |   ’ Involuntary memory, for him, is a physical sensation, a sense perception, smell and taste.
-      include components/author-timeline.pug
+        +author-quote('It all began here. Treib talks to JJ Smith about her nomadic upbringing')
+    
+        //- include components/multiple-images.pug
+        +author-copy(['We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.', 'We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.'], './img/double-one.jpg')
+        +author-copy(['When I was around five, my mom wanted us to live in the country, so she and my father decided to get a place that was about a half hour outside of Saginaw. It was isolated farm country. We had this double life—we would live out there on weekends, and during the week we commuted to city schools. Both my parents worked in the city. Then we would drive back at night in the dark. I have so many memories of just being in the car. We moved back to the city when I was twelve. My mother was worried that we we barefoot, but when we moved back'])
+        +author-copy(['We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.', 'My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.'], './img/double-one.jpg', 'right')
+        +author-copy(['When I was around five, my mom wanted us to live in the country, so she and my father decided to get a place that was about a half hour outside of Saginaw. It was isolated farm country. We had this double life—we would live out there on weekends, and during the week we commuted to city schools. Both my parents worked in the city. Then we would drive back at night in the dark. I have so many memories of just being in the car. We moved back to the city when I was twelve. My mother was worried that we we barefoot, but when we moved back'])
+        section.reading
+          .animated-line__container
+            .animated-line.js-visibility.animated-line-show  
+          .reading__inner.container.grid
+            h3.js-visibility.reveal-slide Reading 
+            img(src="./img/book.jpg", alt="Double two" class="js-lightbox")
+            p 
+            span Marcel Proust ‘In Search of Lost Time’  
+              |   “I was struck by Proust’s conception of involuntary memory that he contrasts to voluntary memory. He compares voluntary memory to looking through pages of a photo album: Yes, that was me at that time. Involuntary memory, for him, is a physical sensation, a sense perception, smell and taste being the most ephemeral and 
+        section.reading
+          .reading__inner.container.grid
+            h3.js-visibility.reveal-slide  Listening 
+            p 
+              span Prince, ‘Dancing Close and Slow’ 
+              |   ’ Involuntary memory, for him, is a physical sensation, a sense perception, smell and taste.
+        include components/author-timeline.pug
  
       
-    include components/lightbox
-    include components/loader.pug 
-    include components/footer.pug
+      include components/lightbox
+      include components/loader.pug 
+      include components/footer.pug

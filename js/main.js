@@ -710,6 +710,23 @@ $(document).ready(() => {
     $('input[name=price]').change(updateList);
   }
 
+  function initArtSingleCarousel(){
+    const carousel = $('.art-single__carousel')
+
+    if(!$(carousel).length){
+      return;
+    }
+    
+
+
+    $(carousel).not('.slick-initialized').slick({
+      dots: true,
+      nextArrow: '.art-single__slide-right',
+      prevArrow: '.art-single__slide-left'
+    });
+
+  }
+
 
 
   /* FUNCTION CALLS */
@@ -729,10 +746,10 @@ $(document).ready(() => {
     initLightbox()
     initVideoControls()
     header()
-
     initArtistSearch()
     initArtGrid()
     initArtFilter()
+    initArtSingleCarousel()
   }
 
   

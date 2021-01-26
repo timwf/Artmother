@@ -9,9 +9,9 @@
     <meta name="format-detection" content="telephone=no"><script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.js" integrity="sha512-wixq/u8vbwoVM6yCmTHUNszWudaPpwf8pKxfG1NPUOBXTh1ntBx8sr/dJSbGTlZUqpcoPjaUmU1hlBB3oJlzFQ==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
   </head>
-  <body data-barba="wrapper"><!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
+  <body><!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
     <header class="page-header">
       <div class="page-header__inner container">
         <nav class="page-header__nav">
@@ -20,7 +20,7 @@
                 <li><a href="/files/artists.html">Artists</a></li>
                 <li><a href="/files/art.html">Art</a></li>
                 <li><a href="/files/shipping.html">Shipping</a></li>
-                <li><a href="/files/index.html">Contact us</a></li>
+                <li><a href="/files/contact-us.html">Contact us</a></li>
                 <li><a href="/files/index.html">Sign up</a></li>
             <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="44" height="150" viewBox="0 0 142 150"><g><g><g><path d="M49.76 60.153H.183v8.241H49.76z"/></g><g><path d="M130.185 145.603c-3.846 2.747-8.79 4.121-14.834 4.121-6.96 0-12.088-1.831-15.384-5.494-3.663-4.03-5.769-8.608-6.318-13.735-6.41 6.959-12.911 11.904-19.505 14.834-7.142 3.113-14.101 4.67-20.877 4.67-8.974 0-15.933-3.297-20.878-9.89-4.945-6.776-7.417-15.2-7.417-25.273 0-12.82 3.846-23.075 11.538-30.767 7.692-7.875 17.673-12.911 29.943-15.109a65.891 65.891 0 0 1 6.318-.824c2.198-.183 4.487-.366 6.868-.55 2.38-.182 4.67-.274 6.867-.274h7.143V22.535c0-4.762-1.923-8.791-5.77-12.087-4.211-3.297-8.424-4.945-12.636-4.945-5.128 0-9.614.916-13.46 2.747-4.213 2.015-6.319 3.846-6.319 5.494 0 .366.733 2.015 2.198 4.945 1.648 3.113 2.472 6.593 2.472 10.439-.732 7.875-5.402 11.812-14.01 11.812-8.79 0-13.277-4.12-13.46-12.362-.183-7.875 3.846-14.65 12.087-20.328C52.992 2.756 63.797.009 77.166.009c12.454 0 23.076 3.113 31.866 9.34 8.425 6.227 12.637 14.376 12.637 24.449v98.345c0 1.831.55 3.113 1.648 3.846 1.282 1.099 2.93 1.648 4.945 1.648 1.465 0 3.205-.824 5.22-2.472a28.426 28.426 0 0 1 2.609-2.335c.824-.641 1.42-1.145 1.785-1.511l3.297 3.846c-3.48 4.029-7.142 7.508-10.988 10.438zM93.649 79.95c-2.747-2.015-5.586-3.663-8.516-4.945a13.191 13.191 0 0 0-4.67-.824c-2.015 0-4.396.274-7.143.824-6.226 1.648-10.988 5.036-14.284 10.164-3.48 5.128-5.22 12.179-5.22 21.152 0 8.608 1.374 15.75 4.12 21.428 2.748 5.677 7.143 8.516 13.187 8.516 6.776 0 12.178-3.938 16.207-11.813 4.213-8.058 6.319-17.215 6.319-27.47z"/></g></g></g></svg></a></li>
           </ul>
@@ -35,7 +35,7 @@
                 <li><a href="/files/artists.html">Artists</a></li>
                 <li><a href="/files/art.html">Art</a></li>
                 <li><a href="/files/shipping.html">Shipping</a></li>
-                <li><a href="/files/index.html">Contact us</a></li>
+                <li><a href="/files/contact-us.html">Contact us</a></li>
                 <li><a href="/files/index.html">Sign up</a></li>
           </ul>
         </div>
@@ -48,364 +48,365 @@
         </div>
       </div>
     </header>
-    <main data-barba="container" data-barba-namespace="home">
-      <section class="artist-hero">
-        <div class="animated-line__container">
-          <div class="animated-line js-visibility animated-line-show"> </div>
-        </div>
-        <div class="artist-hero__inner container">
-          <div class="artist-hero__title grid js-visibility reveal-slide">
-            <div class="artist-hero__name reveal-container">
-              <h1 class="artist-hero__first-name js-visibility reveal-text">Patricia </h1>
+    <main-wrap data-barba="wrapper">
+      <main data-barba="container" data-barba-namespace="home">
+        <section class="artist-hero">
+          <div class="animated-line__container">
+            <div class="animated-line js-visibility animated-line-show"> </div>
+          </div>
+          <div class="artist-hero__inner container">
+            <div class="artist-hero__title grid js-visibility reveal-slide">
+              <div class="artist-hero__name reveal-container">
+                <h1 class="artist-hero__first-name js-visibility reveal-text">Patricia </h1>
+              </div>
+              <div class="artist-hero__name reveal-container">
+                <h1 class="artist-hero__second-name js-visibility reveal-text">Treib</h1>
+              </div>
             </div>
-            <div class="artist-hero__name reveal-container">
-              <h1 class="artist-hero__second-name js-visibility reveal-text">Treib</h1>
+            <div class="artist-hero__image-text grid"> 
+              <div class="artist-hero__image-wrap"><img src="./img/double-one.jpg" alt=""></div>
+              <div class="artist-hero__text-wrap">
+                <h3>"You can see Treib's hand puckering and smoothing shapes, just like a body might sulpt a bedsheet."</h3>
+              </div>
             </div>
           </div>
-          <div class="artist-hero__image-text grid"> 
-            <div class="artist-hero__image-wrap"><img src="./img/double-one.jpg" alt=""></div>
-            <div class="artist-hero__text-wrap">
-              <h3>"You can see Treib's hand puckering and smoothing shapes, just like a body might sulpt a bedsheet."</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="artist-hero__height"></div>
-      <section class="full-width-video">
-        <div class="full-width-video__inner container grid">
-          <div class="full-width-video__video-container"><svg class="full-width-video__play" width="395" height="389" viewBox="0 0 395 389" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M394.607 198.59C394.607 305.921 306.562 390.879 197.553 388.733C88.545 386.587 0.5 298.163 0.5 190.833C0.5 83.5 88.545 -1.45803 197.553 0.687969C305.723 2.81797 394.607 91.259 394.607 198.59ZM25.655 191.327C25.655 284.623 102.8 362.099 197.553 363.964C292.307 365.83 369.451 291.391 369.451 198.094C369.451 104.799 292.307 27.323 197.553 25.458C102.8 23.593 25.655 98.032 25.655 191.328V191.327ZM139.87 109L293 198.094L139.87 280V109Z" fill="white"/></svg>
+        </section>
+        <div class="artist-hero__height"></div>
+        <section class="full-width-video">
+          <div class="full-width-video__inner container grid">
+            <div class="full-width-video__video-container"><svg class="full-width-video__play" width="395" height="389" viewBox="0 0 395 389" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M394.607 198.59C394.607 305.921 306.562 390.879 197.553 388.733C88.545 386.587 0.5 298.163 0.5 190.833C0.5 83.5 88.545 -1.45803 197.553 0.687969C305.723 2.81797 394.607 91.259 394.607 198.59ZM25.655 191.327C25.655 284.623 102.8 362.099 197.553 363.964C292.307 365.83 369.451 291.391 369.451 198.094C369.451 104.799 292.307 27.323 197.553 25.458C102.8 23.593 25.655 98.032 25.655 191.328V191.327ZM139.87 109L293 198.094L139.87 280V109Z" fill="white"/></svg>
 <svg class="full-width-video__pause" width="395" height="389" viewBox="0 0 395 389" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M394.737 198.59C394.737 305.921 306.692 390.879 197.683 388.733C88.6749 386.587 0.629883 298.163 0.629883 190.833C0.629883 83.5 88.6749 -1.45803 197.683 0.687969C305.853 2.81797 394.737 91.259 394.737 198.59ZM25.7849 191.327C25.7849 284.623 102.93 362.099 197.683 363.964C292.437 365.83 369.581 291.391 369.581 198.094C369.581 104.799 292.437 27.323 197.683 25.458C102.93 23.593 25.7849 98.032 25.7849 191.328V191.327ZM126.408 114.874L176.72 115.864V272.733L126.408 271.743V114.874ZM218.646 116.689L268.958 117.679V274.549L218.646 273.559V116.689Z" fill="white"/></svg>
-            <video id="myVideo" playsinline autoplay muted loop>
-              <source src="./img/full-width-two.mp4" type="video/mp4">
-            </video>
+              <video id="myVideo" playsinline autoplay muted loop>
+                <source src="./img/full-width-two.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
-        </div>
-        <div class="full-width-video__text-wrap container grid">
-          <h2>Patricia Treib <span>opened June 7</span></h2>
-          <div class="full-width-video__info">
-            <h5>Curator: Julie Smith | Film: Jane Smith | Featuring: JJ Smith | Words: John Smith & Patricia Trib | Images: James Smith</h5><svg xmlns="http://www.w3.org/2000/svg" width="156" height="217" viewBox="0 0 156 217"><g><g><g><path fill="red" d="M73.951 15.648L48.108 39.873l-5.596-5.97L78.048.592l35.526 33.31-5.598 5.97L82.14 15.645v123.53h-8.184z"/></g><g><path fill="red" d="M155.782 216.916H.303V61.436h57.282v8.184H8.486v139.113H147.6V69.62H98.5v-8.183h57.282z"/></g></g></g></svg>
+          <div class="full-width-video__text-wrap container grid">
+            <h2>Patricia Treib <span>opened June 7</span></h2>
+            <div class="full-width-video__info">
+              <h5>Curator: Julie Smith | Film: Jane Smith | Featuring: JJ Smith | Words: John Smith & Patricia Trib | Images: James Smith</h5><svg xmlns="http://www.w3.org/2000/svg" width="156" height="217" viewBox="0 0 156 217"><g><g><g><path fill="red" d="M73.951 15.648L48.108 39.873l-5.596-5.97L78.048.592l35.526 33.31-5.598 5.97L82.14 15.645v123.53h-8.184z"/></g><g><path fill="red" d="M155.782 216.916H.303V61.436h57.282v8.184H8.486v139.113H147.6V69.62H98.5v-8.183h57.282z"/></g></g></g></svg>
+            </div>
           </div>
-        </div>
+          <div class="animated-line__container">
+            <div class="animated-line js-visibility animated-line-show"> </div>
+          </div>
+        </section>
+        <section class="about-author-heading">
+          <div class="about-author-heading grid container js-visibility reveal-slide">
+            <h4>Patricia Treb's paintings are bold and often big; they're positive and joyful to be around. Flat, translucent shapes interlock and dance across the surfaces of her canvases, creating what read like colourful abstract scriptures but what feel intermatley familiar places.</h4>
+          </div>
+        </section>
+        <section class="double-image">
+          <div class="double-image__inner grid container">
+            <div class="double-image__one js-visibility reveal-slide-left"><img class="js-lightbox" src="./img/double-one.jpg" alt="Double one">
+              <p>Flowers in the stream 2004</p>
+            </div>
+            <div class="double-image__two js-visibility reveal-slide-right"><img class="js-lightbox" src="./img/double-two.jpg" alt="Double two">
+              <p>Flowers in the stream 2004</p>
+            </div>
+          </div>
+        </section>
+        <section class="author-copy">   
+          <div class="author-copy__inner grid container">
+            <div class="author-copy__wrap">
+              <div class="author-copy__image-wrap js-visibility reveal-slide-left">
+              </div>
+              <p>Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
+              <p>“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things aand the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
+            </div>
+          </div>
+        </section>
+        <section class="author-quote">
+          <div class="author-quote__inner grid container js-visibility reveal-slide">
+            <h3>“Visual perception, as we know, is unstable: If you look at something long enough, its appearance begins to shift.”</h3>
+          </div>
+        </section>
+        <section class="author-copy">   
+          <div class="author-copy__inner grid container">
+            <div class="author-copy__wrap">
+              <div class="author-copy__image-wrap js-visibility reveal-slide-left">
+              </div>
+              <p>Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
+              <p>“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
+            </div>
+          </div>
+        </section>
+        <section class="author-quote">
+          <div class="author-quote__inner grid container js-visibility reveal-slide">
+            <h3>“Each time you remember something, you’re not being teleported to the past—you physically experiencing it in the present.</h3>
+          </div>
+        </section>
+        <section class="author-copy">   
+          <div class="author-copy__inner grid container">
+            <div class="author-copy__wrap">
+              <div class="author-copy__image-wrap js-visibility reveal-slide-left">
+              </div>
+              <p>Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
+              <p>“That echo between those two moments – the memory and the present - means that the time between them collapses. For me, that resonates fully with the space of a painting because everything’s happening at once.”</p>
+            </div>
+          </div>
+        </section>
         <div class="animated-line__container">
           <div class="animated-line js-visibility animated-line-show"> </div>
         </div>
-      </section>
-      <section class="about-author-heading">
-        <div class="about-author-heading grid container js-visibility reveal-slide">
-          <h4>Patricia Treb's paintings are bold and often big; they're positive and joyful to be around. Flat, translucent shapes interlock and dance across the surfaces of her canvases, creating what read like colourful abstract scriptures but what feel intermatley familiar places.</h4>
-        </div>
-      </section>
-      <section class="double-image">
-        <div class="double-image__inner grid container">
-          <div class="double-image__one js-visibility reveal-slide-left"><img class="js-lightbox" src="./img/double-one.jpg" alt="Double one">
-            <p>Flowers in the stream 2004</p>
+        <section class="author-quote">
+          <div class="author-quote__inner grid container js-visibility reveal-slide">
+            <h3>It all began here. Treib talks to JJ Smith about her nomadic upbringing</h3>
           </div>
-          <div class="double-image__two js-visibility reveal-slide-right"><img class="js-lightbox" src="./img/double-two.jpg" alt="Double two">
-            <p>Flowers in the stream 2004</p>
-          </div>
-        </div>
-      </section>
-      <section class="author-copy">   
-        <div class="author-copy__inner grid container">
-          <div class="author-copy__wrap">
-            <div class="author-copy__image-wrap js-visibility reveal-slide-left">
-            </div>
-            <p>Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
-            <p>“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things aand the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
-          </div>
-        </div>
-      </section>
-      <section class="author-quote">
-        <div class="author-quote__inner grid container js-visibility reveal-slide">
-          <h3>“Visual perception, as we know, is unstable: If you look at something long enough, its appearance begins to shift.”</h3>
-        </div>
-      </section>
-      <section class="author-copy">   
-        <div class="author-copy__inner grid container">
-          <div class="author-copy__wrap">
-            <div class="author-copy__image-wrap js-visibility reveal-slide-left">
-            </div>
-            <p>Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
-            <p>“That echo between those two moments the memory and the present - means that the time between them collapses. For me, that resonates fully with the space“She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
-          </div>
-        </div>
-      </section>
-      <section class="author-quote">
-        <div class="author-quote__inner grid container js-visibility reveal-slide">
-          <h3>“Each time you remember something, you’re not being teleported to the past—you physically experiencing it in the present.</h3>
-        </div>
-      </section>
-      <section class="author-copy">   
-        <div class="author-copy__inner grid container">
-          <div class="author-copy__wrap">
-            <div class="author-copy__image-wrap js-visibility reveal-slide-left">
-            </div>
-            <p>Here we are again, back in the present. It’s as if Treib captures memory in motion, because everything jumps to the surface. Everything is rewritten on the same plane. She captures the space of things and the space between things, all in one, which makes it feel like her paintings vibrate with captured time.</p>
-            <p>“That echo between those two moments – the memory and the present - means that the time between them collapses. For me, that resonates fully with the space of a painting because everything’s happening at once.”</p>
-          </div>
-        </div>
-      </section>
-      <div class="animated-line__container">
-        <div class="animated-line js-visibility animated-line-show"> </div>
-      </div>
-      <section class="author-quote">
-        <div class="author-quote__inner grid container js-visibility reveal-slide">
-          <h3>It all began here. Treib talks to JJ Smith about her nomadic upbringing</h3>
-        </div>
-      </section>
-      <section class="author-copy">   
-        <div class="author-copy__inner grid container">
-          <div class="author-copy__wrap">
-            <div class="author-copy__image-wrap js-visibility reveal-slide-left"><img class="js-lightbox" src="./img/double-one.jpg" alt="Double two"/>
-              <h5>Mud 2005</h5>
-            </div>
-            <p>We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.</p>
-            <p>We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.</p>
-          </div>
-        </div>
-      </section>
-      <section class="author-copy">   
-        <div class="author-copy__inner grid container">
-          <div class="author-copy__wrap">
-            <div class="author-copy__image-wrap js-visibility reveal-slide-left">
-            </div>
-            <p>When I was around five, my mom wanted us to live in the country, so she and my father decided to get a place that was about a half hour outside of Saginaw. It was isolated farm country. We had this double life—we would live out there on weekends, and during the week we commuted to city schools. Both my parents worked in the city. Then we would drive back at night in the dark. I have so many memories of just being in the car. We moved back to the city when I was twelve. My mother was worried that we we barefoot, but when we moved back</p>
-          </div>
-        </div>
-      </section>
-      <section class="author-copy">   
-        <div class="author-copy__inner grid container">
-          <div class="author-copy__wrap">
-            <div class="author-copy__image-wrap author-copy__image-wrap--right js-visibility reveal-slide-right"><img class="js-lightbox" src="./img/double-one.jpg" alt="Double two"/>
-              <h5>Mud 2005</h5>
-            </div>
-            <p>We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.</p>
-            <p>My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.</p>
-          </div>
-        </div>
-      </section>
-      <section class="author-copy">   
-        <div class="author-copy__inner grid container">
-          <div class="author-copy__wrap">
-            <div class="author-copy__image-wrap js-visibility reveal-slide-left">
-            </div>
-            <p>When I was around five, my mom wanted us to live in the country, so she and my father decided to get a place that was about a half hour outside of Saginaw. It was isolated farm country. We had this double life—we would live out there on weekends, and during the week we commuted to city schools. Both my parents worked in the city. Then we would drive back at night in the dark. I have so many memories of just being in the car. We moved back to the city when I was twelve. My mother was worried that we we barefoot, but when we moved back</p>
-          </div>
-        </div>
-      </section>
-      <section class="reading">
-        <div class="animated-line__container">
-          <div class="animated-line js-visibility animated-line-show"> </div>
-        </div>
-        <div class="reading__inner container grid">
-          <h3 class="js-visibility reveal-slide">Reading </h3><img class="js-lightbox" src="./img/book.jpg" alt="Double two">
-          <p> <span>
-              Marcel Proust ‘In Search of Lost Time’    “I was struck by Proust’s conception of involuntary memory that he contrasts to voluntary memory. He compares voluntary memory to looking through pages of a photo album: Yes, that was me at that time. Involuntary memory, for him, is a physical sensation, a sense perception, smell and taste being the most ephemeral and </span></p>
-        </div>
-      </section>
-      <section class="reading">
-        <div class="reading__inner container grid">
-          <h3 class="js-visibility reveal-slide"> Listening </h3>
-          <p> <span>Prince, ‘Dancing Close and Slow’ </span>  ’ Involuntary memory, for him, is a physical sensation, a sense perception, smell and taste.</p>
-        </div>
-      </section>
-      <section class="author-timeline">
-        <div class="author-timeline__center-line"></div>
-        <div class="author-timeline__inner grid container">
-          <div class="author-timeline__row-one-left-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline one">
-            <h5>Mud, 2005</h5>
-          </div>
-          <div class="author-timeline__row-one-left-text">
-            <div class="reveal-container">
-              <h3>Dec 2019</h3>
-            </div>
-            <h4>SOLO EXERBITION:</h4>
-            <h4>Kate McGarry, London
-              <div class="author-timeline__leading-line"></div>
-            </h4>
-            <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-          </div>
-          <div class="author-timeline__row-one-right-text">
-            <div class="reveal-container">
-              <h3>Feb 2020</h3>
-            </div>
-            <h4>SOLO EXERBITION:</h4>
-            <h4>Kate McGarry, London
-              <div class="author-timeline__leading-line"></div>
-            </h4>
-            <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-          </div>
-          <div class="author-timeline__row-one-right-img"><img class="js-lightbox" src="./img/double-one.jpg" alt="timeline two">
-            <h5>Mud, 2005</h5>
-          </div>
-          <div class="author-timeline__row-two-left-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline three">
-            <h5>Mud, 2005</h5>
-          </div>
-          <div class="author-timeline__row-two-left-text">
-            <div class="reveal-container">
-              <h3>Apr 2020</h3>
-            </div>
-            <h4>SOLO EXERBITION:</h4>
-            <h4>Kate McGarry, London
-              <div class="author-timeline__leading-line"></div>
-            </h4>
-            <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free</p>
-          </div>
-          <div class="author-timeline__row-two-right-text">
-            <div class="reveal-container">
-              <h3>Nov 2020</h3>
-            </div>
-            <h4>SOLO EXERBITION:</h4>
-            <h4>Kate McGarry, London
-              <div class="author-timeline__leading-line"></div>
-            </h4>
-            <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-          </div>
-          <div class="author-timeline__row-two-right-img"><img class="js-lightbox" src="./img/artist-hero.jpg" alt="timeline four">
-            <h5>Mud, 2005</h5>
-          </div>
-          <div class="author-timeline__row-three-left-img"><img class="js-lightbox" src="./img/double-one.jpg" alt="timeline five">
-            <h5>Mud, 2005</h5>
-          </div>
-          <div class="author-timeline__row-three-left-text">     
-            <div class="reveal-container">
-              <h3>Dec 2020</h3>
-            </div>
-            <h4>SOLO EXERBITION:</h4>
-            <h4>Kate McGarry, London
-              <div class="author-timeline__leading-line"></div>
-            </h4>
-            <p>in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-          </div>
-          <div class="author-timeline__row-three-right-text">
-            <div class="reveal-container">
-              <h3>Jan 2021</h3>
-            </div>
-            <h4>SOLO EXERBITION:</h4>
-            <h4>Kate McGarry, London
-              <div class="author-timeline__leading-line"></div>
-            </h4>
-            <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free MacDowell Colony residency in Florida. It was set up to support artists who innovate</p>
-          </div>
-          <div class="author-timeline__row-three-right-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline six">
-            <h5>Mud, 2005</h5>
-          </div>
-          <div class="author-timeline__row-one-left-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline seven">
-            <h5>Mud, 2005</h5>
-          </div>
-          <div class="author-timeline__row-one-left-text">
-            <div class="reveal-container">
-              <h3>Dec 2019</h3>
-            </div>
-            <h4>SOLO EXERBITION:</h4>
-            <h4>Kate McGarry, London
-              <div class="author-timeline__leading-line"></div>
-            </h4>
-            <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-          </div>
-          <div class="author-timeline__row-one-right-text">
-            <div class="reveal-container">
-              <h3>Feb 2020</h3>
-            </div>
-            <h4>SOLO EXERBITION:</h4>
-            <h4>Kate McGarry, London
-              <div class="author-timeline__leading-line"></div>
-            </h4>
-            <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-          </div>
-          <div class="author-timeline__row-one-right-img"><img class="js-lightbox" src="./img/double-one.jpg" alt="timeline eight">
-            <h5>Mud, 2005</h5>
-          </div>
-        </div>
-      </section>
-      <section class="mobile-author-timeline">
-        <div class="mobile-author-timeline__inner">
-          <div class="mobile-author-timeline__top">
-            <div class="mobile-author-timeline__title">
-              <h2>Timeline</h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="74" viewBox="0 0 30 74"><g><g><path d="M29.47 36.788L2.705.116.028 3.872l23.955 32.916L.028 69.704l2.677 3.757z"/></g></g></svg>
-            </div>
-            <div class="mobile-author-timeline__top-colomn-one-text">
-              <div class="reveal-container">
-                <h3>Feb 2020</h3>
+        </section>
+        <section class="author-copy">   
+          <div class="author-copy__inner grid container">
+            <div class="author-copy__wrap">
+              <div class="author-copy__image-wrap js-visibility reveal-slide-left"><img class="js-lightbox" src="./img/double-one.jpg" alt="Double two"/>
+                <h5>Mud 2005</h5>
               </div>
-              <h4>SOLO EXERBITION:</h4>
-              <h4>Kate McGarry, London</h4>
-              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-              <div class="mobile-author-timeline__leading-line"></div>
+              <p>We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.</p>
+              <p>We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.</p>
             </div>
-            <div class="mobile-author-timeline__top-colomn-one-img"><img class="js-lightbox" src="./img/double-one.jpg" alt="timeline one">
+          </div>
+        </section>
+        <section class="author-copy">   
+          <div class="author-copy__inner grid container">
+            <div class="author-copy__wrap">
+              <div class="author-copy__image-wrap js-visibility reveal-slide-left">
+              </div>
+              <p>When I was around five, my mom wanted us to live in the country, so she and my father decided to get a place that was about a half hour outside of Saginaw. It was isolated farm country. We had this double life—we would live out there on weekends, and during the week we commuted to city schools. Both my parents worked in the city. Then we would drive back at night in the dark. I have so many memories of just being in the car. We moved back to the city when I was twelve. My mother was worried that we we barefoot, but when we moved back</p>
+            </div>
+          </div>
+        </section>
+        <section class="author-copy">   
+          <div class="author-copy__inner grid container">
+            <div class="author-copy__wrap">
+              <div class="author-copy__image-wrap author-copy__image-wrap--right js-visibility reveal-slide-right"><img class="js-lightbox" src="./img/double-one.jpg" alt="Double two"/>
+                <h5>Mud 2005</h5>
+              </div>
+              <p>We moved back to the city when I was twelve. My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.</p>
+              <p>My mother was worried that we were too isolated and antisocial. I loved having time alone and running around barefoot, but when we moved back to the city I’m from Saginaw, in the middle of the Michigan. There can be beauty to all different types of landscapes, but Saginaw is just very flat, and post-industrial. The city’s population has halved since the ‘70s and ‘80s.</p>
+            </div>
+          </div>
+        </section>
+        <section class="author-copy">   
+          <div class="author-copy__inner grid container">
+            <div class="author-copy__wrap">
+              <div class="author-copy__image-wrap js-visibility reveal-slide-left">
+              </div>
+              <p>When I was around five, my mom wanted us to live in the country, so she and my father decided to get a place that was about a half hour outside of Saginaw. It was isolated farm country. We had this double life—we would live out there on weekends, and during the week we commuted to city schools. Both my parents worked in the city. Then we would drive back at night in the dark. I have so many memories of just being in the car. We moved back to the city when I was twelve. My mother was worried that we we barefoot, but when we moved back</p>
+            </div>
+          </div>
+        </section>
+        <section class="reading">
+          <div class="animated-line__container">
+            <div class="animated-line js-visibility animated-line-show"> </div>
+          </div>
+          <div class="reading__inner container grid">
+            <h3 class="js-visibility reveal-slide">Reading </h3><img class="js-lightbox" src="./img/book.jpg" alt="Double two">
+            <p> </p><span>
+              Marcel Proust ‘In Search of Lost Time’    “I was struck by Proust’s conception of involuntary memory that he contrasts to voluntary memory. He compares voluntary memory to looking through pages of a photo album: Yes, that was me at that time. Involuntary memory, for him, is a physical sensation, a sense perception, smell and taste being the most ephemeral and </span>
+          </div>
+        </section>
+        <section class="reading">
+          <div class="reading__inner container grid">
+            <h3 class="js-visibility reveal-slide"> Listening </h3>
+            <p> <span>Prince, ‘Dancing Close and Slow’ </span>  ’ Involuntary memory, for him, is a physical sensation, a sense perception, smell and taste.</p>
+          </div>
+        </section>
+        <section class="author-timeline">
+          <div class="author-timeline__center-line"></div>
+          <div class="author-timeline__inner grid container">
+            <div class="author-timeline__row-one-left-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline one">
               <h5>Mud, 2005</h5>
             </div>
-            <div class="mobile-author-timeline__top-colomn-two-text">
+            <div class="author-timeline__row-one-left-text">
               <div class="reveal-container">
-                <h3>Feb 2020</h3>
+                <h3>Dec 2019</h3>
               </div>
               <h4>SOLO EXERBITION:</h4>
-              <h4>Kate McGarry, London</h4>
-              <p>Treib was selected for the inaugural s set up to support artisting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-              <div class="mobile-author-timeline__leading-line"></div>
-            </div>
-            <div class="mobile-author-timeline__top-colomn-three-text">
-              <div class="reveal-container">
-                <h3>Feb 2020</h3>
-              </div>
-              <h4>SOLO EXERBITION:</h4>
-              <h4>Kate McGarry, London</h4>
+              <h4>Kate McGarry, London
+                <div class="author-timeline__leading-line"></div>
+              </h4>
               <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-              <div class="mobile-author-timeline__leading-line"></div>
+            </div>
+            <div class="author-timeline__row-one-right-text">
+              <div class="reveal-container">
+                <h3>Feb 2020</h3>
+              </div>
+              <h4>SOLO EXERBITION:</h4>
+              <h4>Kate McGarry, London
+                <div class="author-timeline__leading-line"></div>
+              </h4>
+              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+            </div>
+            <div class="author-timeline__row-one-right-img"><img class="js-lightbox" src="./img/double-one.jpg" alt="timeline two">
+              <h5>Mud, 2005</h5>
+            </div>
+            <div class="author-timeline__row-two-left-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline three">
+              <h5>Mud, 2005</h5>
+            </div>
+            <div class="author-timeline__row-two-left-text">
+              <div class="reveal-container">
+                <h3>Apr 2020</h3>
+              </div>
+              <h4>SOLO EXERBITION:</h4>
+              <h4>Kate McGarry, London
+                <div class="author-timeline__leading-line"></div>
+              </h4>
+              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free</p>
+            </div>
+            <div class="author-timeline__row-two-right-text">
+              <div class="reveal-container">
+                <h3>Nov 2020</h3>
+              </div>
+              <h4>SOLO EXERBITION:</h4>
+              <h4>Kate McGarry, London
+                <div class="author-timeline__leading-line"></div>
+              </h4>
+              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+            </div>
+            <div class="author-timeline__row-two-right-img"><img class="js-lightbox" src="./img/artist-hero.jpg" alt="timeline four">
+              <h5>Mud, 2005</h5>
+            </div>
+            <div class="author-timeline__row-three-left-img"><img class="js-lightbox" src="./img/double-one.jpg" alt="timeline five">
+              <h5>Mud, 2005</h5>
+            </div>
+            <div class="author-timeline__row-three-left-text">     
+              <div class="reveal-container">
+                <h3>Dec 2020</h3>
+              </div>
+              <h4>SOLO EXERBITION:</h4>
+              <h4>Kate McGarry, London
+                <div class="author-timeline__leading-line"></div>
+              </h4>
+              <p>in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+            </div>
+            <div class="author-timeline__row-three-right-text">
+              <div class="reveal-container">
+                <h3>Jan 2021</h3>
+              </div>
+              <h4>SOLO EXERBITION:</h4>
+              <h4>Kate McGarry, London
+                <div class="author-timeline__leading-line"></div>
+              </h4>
+              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free MacDowell Colony residency in Florida. It was set up to support artists who innovate</p>
+            </div>
+            <div class="author-timeline__row-three-right-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline six">
+              <h5>Mud, 2005</h5>
+            </div>
+            <div class="author-timeline__row-one-left-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline seven">
+              <h5>Mud, 2005</h5>
+            </div>
+            <div class="author-timeline__row-one-left-text">
+              <div class="reveal-container">
+                <h3>Dec 2019</h3>
+              </div>
+              <h4>SOLO EXERBITION:</h4>
+              <h4>Kate McGarry, London
+                <div class="author-timeline__leading-line"></div>
+              </h4>
+              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+            </div>
+            <div class="author-timeline__row-one-right-text">
+              <div class="reveal-container">
+                <h3>Feb 2020</h3>
+              </div>
+              <h4>SOLO EXERBITION:</h4>
+              <h4>Kate McGarry, London
+                <div class="author-timeline__leading-line"></div>
+              </h4>
+              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+            </div>
+            <div class="author-timeline__row-one-right-img"><img class="js-lightbox" src="./img/double-one.jpg" alt="timeline eight">
+              <h5>Mud, 2005</h5>
             </div>
           </div>
-          <div class="mobile-author-timeline__bottom">    
-            <div class="mobile-author-timeline__bottom-colomn-one-img"><img class="js-lightbox" src="./img/artist-hero.jpg" alt="timeline three">
-              <h5>Mud, 2005</h5>
-            </div>
-            <div class="mobile-author-timeline__bottom-colomn-one-text">
-              <div class="reveal-container">
-                <h3>Feb 2020</h3>
+        </section>
+        <section class="mobile-author-timeline">
+          <div class="mobile-author-timeline__inner">
+            <div class="mobile-author-timeline__top">
+              <div class="mobile-author-timeline__title">
+                <h2>Timeline</h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="74" viewBox="0 0 30 74"><g><g><path d="M29.47 36.788L2.705.116.028 3.872l23.955 32.916L.028 69.704l2.677 3.757z"/></g></g></svg>
               </div>
-              <h4>SOLO EXERBITION:</h4>
-              <h4>Kate McGarry, London</h4>
-              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-              <div class="mobile-author-timeline__leading-line"></div>
-            </div>
-            <div class="mobile-author-timeline__bottom-colomn-two-text">
-              <div class="reveal-container">
-                <h3>Feb 2020</h3>
+              <div class="mobile-author-timeline__top-colomn-one-text">
+                <div class="reveal-container">
+                  <h3>Feb 2020</h3>
+                </div>
+                <h4>SOLO EXERBITION:</h4>
+                <h4>Kate McGarry, London</h4>
+                <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+                <div class="mobile-author-timeline__leading-line"></div>
               </div>
-              <h4>SOLO EXERBITION:</h4>
-              <h4>Kate McGarry, London</h4>
-              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-              <div class="mobile-author-timeline__leading-line"></div>
-            </div>
-            <div class="mobile-author-timeline__bottom-colomn-two-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline gour">
-              <h5>Mud, 2005</h5>
-            </div>
-            <div class="mobile-author-timeline__bottom-colomn-three-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline gour">
-              <h5>Mud, 2005</h5>
-            </div>
-            <div class="mobile-author-timeline__bottom-colomn-three-text">
-              <div class="reveal-container">
-                <h3>Feb 2020</h3>
+              <div class="mobile-author-timeline__top-colomn-one-img"><img class="js-lightbox" src="./img/double-one.jpg" alt="timeline one">
+                <h5>Mud, 2005</h5>
               </div>
-              <h4>SOLO EXERBITION:</h4>
-              <h4>Kate McGarry, London</h4>
-              <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
-              <div class="mobile-author-timeline__leading-line"></div>
+              <div class="mobile-author-timeline__top-colomn-two-text">
+                <div class="reveal-container">
+                  <h3>Feb 2020</h3>
+                </div>
+                <h4>SOLO EXERBITION:</h4>
+                <h4>Kate McGarry, London</h4>
+                <p>Treib was selected for the inaugural s set up to support artisting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+                <div class="mobile-author-timeline__leading-line"></div>
+              </div>
+              <div class="mobile-author-timeline__top-colomn-three-text">
+                <div class="reveal-container">
+                  <h3>Feb 2020</h3>
+                </div>
+                <h4>SOLO EXERBITION:</h4>
+                <h4>Kate McGarry, London</h4>
+                <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+                <div class="mobile-author-timeline__leading-line"></div>
+              </div>
             </div>
+            <div class="mobile-author-timeline__bottom">    
+              <div class="mobile-author-timeline__bottom-colomn-one-img"><img class="js-lightbox" src="./img/artist-hero.jpg" alt="timeline three">
+                <h5>Mud, 2005</h5>
+              </div>
+              <div class="mobile-author-timeline__bottom-colomn-one-text">
+                <div class="reveal-container">
+                  <h3>Feb 2020</h3>
+                </div>
+                <h4>SOLO EXERBITION:</h4>
+                <h4>Kate McGarry, London</h4>
+                <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+                <div class="mobile-author-timeline__leading-line"></div>
+              </div>
+              <div class="mobile-author-timeline__bottom-colomn-two-text">
+                <div class="reveal-container">
+                  <h3>Feb 2020</h3>
+                </div>
+                <h4>SOLO EXERBITION:</h4>
+                <h4>Kate McGarry, London</h4>
+                <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+                <div class="mobile-author-timeline__leading-line"></div>
+              </div>
+              <div class="mobile-author-timeline__bottom-colomn-two-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline gour">
+                <h5>Mud, 2005</h5>
+              </div>
+              <div class="mobile-author-timeline__bottom-colomn-three-img"><img class="js-lightbox" src="./img/double-two.jpg" alt="timeline gour">
+                <h5>Mud, 2005</h5>
+              </div>
+              <div class="mobile-author-timeline__bottom-colomn-three-text">
+                <div class="reveal-container">
+                  <h3>Feb 2020</h3>
+                </div>
+                <h4>SOLO EXERBITION:</h4>
+                <h4>Kate McGarry, London</h4>
+                <p>Treib was selected for the inaugural MacDowell Colony residency in Florida. It was set up to support artists who innovate with the medium of painting, granting them free It was set up to support artists who innovate with the medium of painting, granting them free </p>
+                <div class="mobile-author-timeline__leading-line"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section class="lightbox">
+        <div class="lightbox__inner container">
+          <div class="lightbox__close"><svg id="Capa_1" enable-background="new 0 0 386.667 386.667" height="512" viewBox="0 0 386.667 386.667" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"/></svg></div>
+          <div class="lightbox__image-wrap"><img src="./img/double-two.jpg" alt="">
+            <p>description</p>
           </div>
         </div>
       </section>
-    </main>
-    <section class="lightbox">
-      <div class="lightbox__inner container">
-        <div class="lightbox__close"><svg id="Capa_1" enable-background="new 0 0 386.667 386.667" height="512" viewBox="0 0 386.667 386.667" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"/></svg></div>
-        <div class="lightbox__image-wrap"><img src="./img/double-two.jpg" alt="">
-          <p>description</p>
-        </div>
-      </div>
-    </section>
-    <section class="loader">
-      <div class="loader__inner container"><svg width="100%" height="260" viewBox="0 0 1965 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <section class="loader">
+        <div class="loader__inner container"><svg width="100%" height="260" viewBox="0 0 1965 260" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M86.3453 136.815H0.211853V147.951H86.3453V136.815Z" fill="black"/>
 <path d="M245.154 238.135L239.427 232.938C238.95 233.309 237.995 234.052 236.563 234.794C235.132 235.908 233.222 237.021 231.791 238.135C228.45 240.362 225.109 241.476 222.722 241.476C219.381 241.476 216.518 240.734 214.131 239.249C212.222 238.135 211.267 236.65 211.267 234.052V101.155C211.267 87.4202 204.108 76.6549 189.313 68.1169C174.04 59.5788 155.426 55.4954 133.948 55.4954C110.561 55.4954 91.9472 59.2076 77.6288 66.632C63.3103 74.4276 56.1511 83.3368 56.6284 94.1022C57.1057 105.239 64.7422 110.807 80.0152 110.807C94.8109 110.807 102.925 105.61 104.357 94.8446C104.357 89.6475 102.925 84.8217 100.061 80.7383C97.6746 76.6549 96.2427 74.4276 96.2427 74.0564C96.2427 71.829 100.061 69.2305 107.22 66.632C113.902 64.0334 121.539 62.9198 130.607 62.9198C137.766 62.9198 145.403 65.1471 152.562 69.6017C159.244 74.0564 162.585 79.6246 162.585 85.9354V146.444H150.175C146.357 146.444 142.539 146.444 138.243 146.815C133.948 147.186 130.13 147.186 126.311 147.558C122.493 147.929 118.675 148.3 115.334 148.671C93.8563 151.641 76.6742 158.323 63.3103 169.088C49.9465 179.483 43.2645 193.218 43.2645 210.665C43.2645 224.4 47.5601 235.537 56.1511 244.817C64.7422 253.726 76.6742 258.181 92.4245 258.181C104.357 258.181 116.289 255.954 128.698 251.87C140.153 247.787 151.607 241.105 162.585 231.824C163.539 238.878 167.358 244.817 173.562 250.385C179.29 255.211 188.358 257.81 200.29 257.81C210.79 257.81 219.381 255.954 226.063 252.241C232.745 248.158 238.95 243.703 245.154 238.135ZM162.585 186.536C162.585 200.271 158.767 212.892 151.607 223.658C144.448 234.423 135.38 239.62 123.448 239.62C112.948 239.62 105.311 235.908 100.538 228.112C95.7654 220.317 93.379 210.665 93.379 199.157C93.379 186.907 96.2427 177.626 102.447 170.573C108.175 163.52 116.289 159.065 127.266 156.838C132.039 156.096 136.334 155.725 139.675 155.725C142.539 155.725 145.403 156.096 147.789 156.838C153.039 158.694 157.812 160.922 162.585 163.52V186.536Z" fill="black"/>
 <path d="M339.659 148.694C338.8 155.641 338.371 162.834 338.371 170.266V244.88H381.329V254.166H258.665V244.88H286.824V148.694H339.659ZM286.824 137.56V68.9258H255.324V59.6457L337.416 57.7896V98.9945C347.602 84.1456 358.098 73.6277 368.918 67.4407C380.371 60.7592 392.944 57.418 406.619 57.418C418.397 57.418 427.465 59.7693 433.824 64.4712C440.508 69.421 443.85 75.3601 443.85 82.2896C443.218 95.6534 434.303 102.336 417.124 102.336H415.218C399.619 102.336 391.346 96.8912 390.397 86.0017L392.303 73.752C392.303 73.0095 391.987 72.3906 391.346 71.8953C390.713 71.8953 390.235 71.8335 389.918 71.7099C389.602 71.5862 389.124 71.5244 388.483 71.5244C376.072 71.5244 364.619 81.4234 354.124 101.222C348.26 112.41 344.036 124.522 341.446 137.56H286.824Z" fill="black"/>
@@ -417,54 +418,56 @@
 <path d="M1754.41 182.793H1742.48C1741.05 190.218 1738.18 197.642 1734.36 205.066C1730.07 212.862 1725.29 220.286 1719.09 228.082C1707.16 243.302 1691.41 251.097 1671.84 251.097C1656.09 251.097 1645.59 245.158 1639.38 233.279C1633.18 221.029 1629.84 204.324 1629.84 182.793V147.156H1748.68C1751.07 147.156 1752.02 146.414 1752.02 144.558C1752.5 143.444 1752.5 142.33 1752.98 141.217C1752.98 140.103 1752.98 138.989 1752.98 137.505C1752.98 114.86 1744.86 95.9281 1728.16 79.9657C1711.93 64.0033 1692.36 56.2077 1668.98 56.2077C1642.73 56.2077 1619.82 66.6018 1601.2 87.0188C1582.59 107.436 1573.04 132.307 1573.04 160.891C1573.04 186.877 1582.11 209.521 1600.72 229.195C1619.34 248.87 1640.34 258.522 1664.2 258.522C1685.2 258.522 1703.82 252.211 1720.52 239.961C1736.27 227.711 1747.73 208.407 1754.41 182.793ZM1700 112.262L1698.57 136.391H1629.84V131.194C1629.84 109.292 1632.22 92.2159 1637 80.7081C1641.29 69.2003 1650.84 63.6321 1665.63 63.6321C1677.09 63.6321 1685.68 68.0867 1691.41 76.6247C1697.61 85.9052 1700.48 97.7842 1700 112.262Z" fill="black"/>
 <path d="M1860.53 148.694C1859.67 155.641 1859.24 162.834 1859.24 170.266V244.88H1902.2V254.166H1779.53V244.88H1807.69V148.694H1860.53ZM1807.69 137.56V68.9258H1776.2V59.6457L1858.28 57.7896V98.9945C1868.47 84.1456 1878.97 73.6277 1889.79 67.4407C1901.24 60.7592 1913.8 57.418 1927.49 57.418C1939.27 57.418 1948.33 59.7693 1954.69 64.4712C1961.38 69.421 1964.72 75.3601 1964.72 82.2896C1964.09 95.6534 1955.17 102.336 1937.99 102.336H1936.08C1920.49 102.336 1912.21 96.8912 1911.27 86.0017L1913.17 73.752C1913.17 73.0095 1912.86 72.3906 1912.21 71.8953C1911.58 71.8953 1911.1 71.8335 1910.79 71.7099C1910.47 71.5862 1909.99 71.5244 1909.35 71.5244C1896.94 71.5244 1885.49 81.4234 1874.99 101.222C1869.13 112.41 1864.91 124.522 1862.32 137.56H1807.69Z" fill="black"/>
 </svg>
-        <div class="loader__sub-heading">
-          <div class="reveal-container">
-            <h2>for creators, </h2>
-          </div>
-          <div class="reveal-container">
-            <h2>collectors</h2>
-          </div>
-          <div class="reveal-container">
-            <h2>& communicators</h2>
+          <div class="loader__sub-heading">
+            <div class="reveal-container">
+              <h2>for creators, </h2>
+            </div>
+            <div class="reveal-container">
+              <h2>collectors</h2>
+            </div>
+            <div class="reveal-container">
+              <h2>& communicators</h2>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <div class="page-tranition"></div>
-    <footer class="page-footer container">
-      <div class="page-footer__inner grid"> 
-        <ul class="page-footer__col-one">
-          <li>Who we are</li>
-          <li>Aquisitions & shipping</li>
-          <li>Contact us</li>
-        </ul>
-        <ul class="page-footer__col-two">
-          <li>Privacy policy</li>
-          <li>Cookie policy</li>
-          <li>Terms & conditions</li>
-          <p>© artmother</p>
-        </ul>
-        <ul class="page-footer__col-three">
-          <h3>join the network</h3>
-          <div class="page-footer__newsletter">
-            <input type="text" placeholder="Email address"><svg width="151" height="169" viewBox="0 0 151 169" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 168V1L149 90L1 168Z" fill="black" stroke="black" stroke-opacity="0.98"/></svg>
-          </div>
-          <div class="page-footer__social"></div>
-        </ul>
-      </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          '<script src="js/jquery-3.3.1.min.js"><\/script>'
-        );
-      
-    </script>
-    <script src="js/main.min.js"><script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.js" integrity="sha512-JDgkxcdf7oYN/lR29Dzzw17b5Rv42eJ4Vj8aysjr+YpqwaURHrcR1/wGmyIBlsXK55Wsq3TW9tWoDzIou2q3qw==" crossorigin="anonymous"></script>
+      </section>
+      <div class="page-tranition"></div>
+      <footer class="page-footer container">
+        <div class="page-footer__inner grid"> 
+          <ul class="page-footer__col-one">
+            <li>Who we are</li>
+            <li>Aquisitions & shipping</li>
+            <li>Contact us</li>
+          </ul>
+          <ul class="page-footer__col-two">
+            <li>Privacy policy</li>
+            <li>Cookie policy</li>
+            <li>Terms & conditions</li>
+            <p>© artmother</p>
+          </ul>
+          <ul class="page-footer__col-three">
+            <h3>join the network</h3>
+            <div class="page-footer__newsletter">
+              <input type="text" placeholder="Email address"><svg width="151" height="169" viewBox="0 0 151 169" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 168V1L149 90L1 168Z" fill="black" stroke="black" stroke-opacity="0.98"/></svg>
+            </div>
+            <div class="page-footer__social"></div>
+          </ul>
+        </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="js/jquery-3.3.1.min.js"><\/script>'
+          );
+        
+      </script>
+      <script src="js/main.min.js"><script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.js" integrity="sha512-JDgkxcdf7oYN/lR29Dzzw17b5Rv42eJ4Vj8aysjr+YpqwaURHrcR1/wGmyIBlsXK55Wsq3TW9tWoDzIou2q3qw==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js" integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg==" crossorigin="anonymous"></script>
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous"></script>
+      </script>
+    </main-wrap>
   </body>
 </html>

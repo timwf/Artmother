@@ -4,11 +4,12 @@ include blocks/blocks
 doctype html
 html.no-js.is-observer
   include components/head.pug
-  body(data-barba="wrapper")
+  body
     include components/header.pug
-    main(data-barba="container" data-barba-namespace="shipping")
-      include components/shipping.pug 
- 
+    main-wrap(data-barba="wrapper")
+      main(data-barba="container" data-barba-namespace="shipping")
+        include components/shipping.pug 
+  
 
-    include components/lightbox
-    include components/footer.pug
+      include components/lightbox
+      include components/footer.pug

@@ -1,4 +1,4 @@
-- var page = 'Artists';
+- var page = 'Art-single';
 include blocks/blocks
 
 doctype html
@@ -7,10 +7,8 @@ html.no-js.is-observer
   body
     include components/header.pug
     main-wrap(data-barba="wrapper")
-      main(data-barba="container" data-barba-namespace="artists")
-        include components/artists.pug 
-
-      
+      main(data-barba="container" data-barba-namespace="artsingle")      
+        include components/art-single.pug       
       
       include components/lightbox
       //- include components/loader.pug 

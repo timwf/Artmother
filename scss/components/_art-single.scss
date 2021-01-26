@@ -1,0 +1,281 @@
+.art-single{
+  padding-top: 30px;
+
+  @include respond-to(sm){
+    padding-top: 100px;
+  }
+
+  svg{
+    height: 20px;
+  }
+
+  &__breadcrumbs-wrap{
+    margin-bottom: 20px;
+  }
+
+  &__breadcrumb-left{
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    a{
+      display: flex;
+      align-items: center;
+    }
+
+    h3{
+      margin-left: 10px;
+
+      @include respond-to(sm){
+        margin-left: 90px;
+      }
+    }
+    
+  }
+
+  &__breadcrumb-right{
+    grid-column-start: 6;
+    grid-column-end: 13;
+    display: flex;
+    justify-self: end;
+    transition: 0.4s;
+
+
+    svg{
+      transform: rotate(180deg);
+    }
+
+    h3{
+      margin-right: 10px;
+      font-family: 'NeueMachina-Light';
+    }
+
+    a{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__carousel{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    height: 200px;
+
+    @include respond-to(sm){
+      grid-column-start: 3;
+      grid-column-end: 11;
+      height: 500px;
+    }
+
+
+    img{
+      height: 200px;
+      width: auto !important;
+
+      @include respond-to(sm){
+        height: 500px;
+      }
+    }
+
+    .slick-slide{
+      height: 200px;
+      text-align: center;
+      background-color: #e2e2e22b;
+
+      @include respond-to(sm){
+        height: 500px;
+      }
+    }
+
+    .slick-dots{
+      display: flex;
+      margin: 0px 15%;
+      justify-content: space-between;
+      margin-top: 20px;
+      
+      li{
+        background-color: white;
+        font-size: 0px;
+        height: 5px;
+        width: 5px;
+        border: solid black;
+        border-width: 1px;
+        border-radius: 50%;
+
+        @include hover{
+          cursor: pointer;
+        }
+      }
+
+      li.slick-active{
+        background-color: black;
+      }
+    }
+  }
+
+  &__slide-left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: end;
+    top: 164px;
+    position: absolute;
+
+    @include hover{
+      cursor: pointer;
+    }
+
+    @include respond-to(sm){
+      grid-column-start: 2;
+      grid-column-end: 2;
+      position: relative;
+      margin-top: -100px;
+      top: 0px;
+    }
+  }
+
+  &__slide-right{
+    grid-column-start: 12;
+    grid-column-end: 13;
+    align-self: center;
+    justify-self: end;
+    top: 164px;
+    position: absolute;
+    right: 10px;
+    transform: rotate(180deg);
+
+    @include hover{
+      cursor: pointer;
+    }
+
+    @include respond-to(sm){
+      position: relative;
+      grid-column-start: 11;
+      grid-column-end: 12;
+      align-self: center;
+      justify-self: start;
+      margin-top: -100px;
+      top: 0px;
+    }
+  }
+
+  &__title{
+    margin-top: 100px;
+    h1{
+      grid-column-start: 2;
+      grid-column-end: 10;
+      color: $red;
+      font-family: NeueMachina-Bold;
+
+      @include respond-to(sm){
+        grid-column-start: 2;
+        grid-column-end: 6;
+      }
+    }
+
+    svg{
+      grid-column-start: 10;
+      grid-column-end: 13;
+      justify-self: end;
+      height: 30px;
+      width: 25px;
+      margin-right: 50px;
+
+      @include respond-to(sm){
+        grid-column-start: 6;
+        grid-column-end: 11;
+      }
+      
+    }
+  }
+
+  &__details-left{
+    grid-column-start: 4;
+    grid-column-end: 12;
+
+    @include respond-to(sm){
+      grid-column-start: 3;
+      grid-column-end: 7;
+    }
+  }
+
+  &__details-right{
+    grid-column-start: 3;
+    grid-column-end: 12;
+    margin-top: 20px;
+
+    @include respond-to(sm){
+      grid-column-start: 7;
+      grid-column-end: 11;
+      margin-top: 0px;
+    }
+
+    h4{
+      font-size: 14px;
+      margin-bottom: 20px;
+
+      @include respond-to(sm){
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__details-btns{
+    grid-column-start: 3;
+    grid-column-end: 12;
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+    @include respond-to(sm){
+      grid-column-start: 7;
+      grid-column-end: 13;
+    }
+  }
+
+  &__details-btn{
+    border: solid $red;
+    display: table;
+    margin-right: 20px;
+    border-width: 1px;
+    transition: 0.4s;
+    margin-bottom: 20px;
+
+    @include hover{
+      background-color: $red;
+      cursor: pointer;
+
+      p{
+        color: white;
+      }
+    }
+    p{
+      padding: 8px 15px;
+      color: $red;
+    }
+  }
+
+  .is-visible.animated-line-show {
+    top: 41px;
+
+    @include respond-to(sm){
+      width: 42%;
+    }    
+  }
+
+  &__line-after{
+    position: relative;
+
+    @include respond-to(lg){
+      &:after{
+        content: "";
+        display: block;
+        width: 100px;
+        height: 10px;
+        background-color: black;
+        position: absolute;
+        right: 0;
+        top: 10px;
+      }
+    }
+  }
+}

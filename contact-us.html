@@ -11,12 +11,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.js" integrity="sha512-wixq/u8vbwoVM6yCmTHUNszWudaPpwf8pKxfG1NPUOBXTh1ntBx8sr/dJSbGTlZUqpcoPjaUmU1hlBB3oJlzFQ==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
   </head>
-  <body data-barba="wrapper"><!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
+  <body><!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
     <header class="page-header">
       <div class="page-header__inner container">
         <nav class="page-header__nav">
           <ul>
-                <li class="current-menu-item"><a href="/files/about.html">About</a></li>
+                <li><a href="/files/about.html">About</a></li>
                 <li><a href="/files/artists.html">Artists</a></li>
                 <li><a href="/files/art.html">Art</a></li>
                 <li><a href="/files/shipping.html">Shipping</a></li>
@@ -31,7 +31,7 @@
       <div class="mobile-page-header__inner container">
         <div class="mobile-page-header__menu">
           <ul>
-                <li class="current-menu-item"><a href="/files/about.html">About</a></li>
+                <li><a href="/files/about.html">About</a></li>
                 <li><a href="/files/artists.html">Artists</a></li>
                 <li><a href="/files/art.html">Art</a></li>
                 <li><a href="/files/shipping.html">Shipping</a></li>
@@ -48,80 +48,72 @@
         </div>
       </div>
     </header>
-    <main data-barba="container" data-barba-namespace="about">
-      <section class="about">
-        <div class="about__inner container">
-          <div class="about__top grid">
-            <div class="about__top-text-wrap">
-              <h2>Artmother makes and publishes content about art and artists that we love.</h2>
-              <h2>Our mission is to promote the best cultural content to build better connections with audiences and collectors.</h2>
+    <main-wrap data-barba="wrapper">
+      <main data-barba="container" data-barba-namespace="contact-us">
+        <section class="contact-us">
+          <div class="contact-us__inner">
+            <div class="contact-us__header grid container">
+              <h2>Talk to us</h2>
             </div>
-            <div class="about__top-image-wrap"><img src="./img/art-one.jpg" alt="">
-              <h5>Michael Polsinelli</h5>
+            <div class="contact-us__main grid container">
+              <div class="contact-us__image-wrap js-visibility reveal-slide-left"><img src="./img/artist-six.jpg" alt="Double two"></div>
+              <div class="contact-us__text-wrap js-visibility reveal-slide-right">
+                <h4>Collecting art?</h4>
+                <p> collectingart@artmother.com</p>
+                <h4>Ideas and queries?</h4>
+                <p> collectingart@artmother.com</p>
+                <h4>Address</h4>
+                <p> xxx x xxxxx xxxx xxx xxx xx xxxxx xxx xxxxxxx xxxxx xxxx xxxxxx xxx xx xxx x xxxxx xxxx xxx xxx xx xxxxx xxx xxxxxxx xxxxx xxxx xxxxxx xxx xxxx</p>
+              </div>
             </div>
           </div>
-          <div class="about__bottom grid">
-            <div class="about__bottom-left">
-              <h3>We’re a global network of visual artists, writers, curators, film directors, photographers and creatives who share a passion for compelling and ambitious content around artists and artworks that we believe are important to the world. This is our platform to share that with you.</h3>
-              <p>Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli</p>
-              <p>Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli</p>
-              <p>Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli</p>
-            </div>
-            <div class="about__bottom-right">       
-              <p>Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli</p>
-              <p>Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli</p>
-              <p>Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli</p>
-              <p>Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli</p>
-              <p>Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli Artmother was founded by London-based curator and media director, Michael Polsinelli         </p>
-            </div>
+        </section>
+      </main>
+      <section class="lightbox">
+        <div class="lightbox__inner container">
+          <div class="lightbox__close"><svg id="Capa_1" enable-background="new 0 0 386.667 386.667" height="512" viewBox="0 0 386.667 386.667" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"/></svg></div>
+          <div class="lightbox__image-wrap"><img src="./img/double-two.jpg" alt="">
+            <p>description</p>
           </div>
         </div>
       </section>
-    </main>
-    <section class="lightbox">
-      <div class="lightbox__inner container">
-        <div class="lightbox__close"><svg id="Capa_1" enable-background="new 0 0 386.667 386.667" height="512" viewBox="0 0 386.667 386.667" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"/></svg></div>
-        <div class="lightbox__image-wrap"><img src="./img/double-two.jpg" alt="">
-          <p>description</p>
+      <div class="page-tranition"></div>
+      <footer class="page-footer container">
+        <div class="page-footer__inner grid"> 
+          <ul class="page-footer__col-one">
+            <li>Who we are</li>
+            <li>Aquisitions & shipping</li>
+            <li>Contact us</li>
+          </ul>
+          <ul class="page-footer__col-two">
+            <li>Privacy policy</li>
+            <li>Cookie policy</li>
+            <li>Terms & conditions</li>
+            <p>© artmother</p>
+          </ul>
+          <ul class="page-footer__col-three">
+            <h3>join the network</h3>
+            <div class="page-footer__newsletter">
+              <input type="text" placeholder="Email address"><svg width="151" height="169" viewBox="0 0 151 169" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 168V1L149 90L1 168Z" fill="black" stroke="black" stroke-opacity="0.98"/></svg>
+            </div>
+            <div class="page-footer__social"></div>
+          </ul>
         </div>
-      </div>
-    </section>
-    <div class="page-tranition"></div>
-    <footer class="page-footer container">
-      <div class="page-footer__inner grid"> 
-        <ul class="page-footer__col-one">
-          <li>Who we are</li>
-          <li>Aquisitions & shipping</li>
-          <li>Contact us</li>
-        </ul>
-        <ul class="page-footer__col-two">
-          <li>Privacy policy</li>
-          <li>Cookie policy</li>
-          <li>Terms & conditions</li>
-          <p>© artmother</p>
-        </ul>
-        <ul class="page-footer__col-three">
-          <h3>join the network</h3>
-          <div class="page-footer__newsletter">
-            <input type="text" placeholder="Email address"><svg width="151" height="169" viewBox="0 0 151 169" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 168V1L149 90L1 168Z" fill="black" stroke="black" stroke-opacity="0.98"/></svg>
-          </div>
-          <div class="page-footer__social"></div>
-        </ul>
-      </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          '<script src="js/jquery-3.3.1.min.js"><\/script>'
-        );
-      
-    </script>
-    <script src="js/main.min.js"><script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.js" integrity="sha512-JDgkxcdf7oYN/lR29Dzzw17b5Rv42eJ4Vj8aysjr+YpqwaURHrcR1/wGmyIBlsXK55Wsq3TW9tWoDzIou2q3qw==" crossorigin="anonymous"></script>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery ||
+          document.write(
+            '<script src="js/jquery-3.3.1.min.js"><\/script>'
+          );
+        
+      </script>
+      <script src="js/main.min.js"><script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.js" integrity="sha512-JDgkxcdf7oYN/lR29Dzzw17b5Rv42eJ4Vj8aysjr+YpqwaURHrcR1/wGmyIBlsXK55Wsq3TW9tWoDzIou2q3qw==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js" integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous"></script>
-    </script>
+      </script>
+    </main-wrap>
   </body>
 </html>
