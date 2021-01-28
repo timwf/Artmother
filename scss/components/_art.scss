@@ -117,25 +117,37 @@
 
 
     input[type='radio']:after {
-      width: 15px;
-      height: 15px;
-      border-radius: 15px;
-      top: -2px;
-      left: -1px;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      top: -38px;
+      left: -3px;
       position: relative;
       background-color: white;
       content: '';
       display: inline-block;
       visibility: visible;
       border: 1px solid $red;
+      z-index: 1;
+    }
+
+    input[type='radio']:before {
+      content: "";
+      width: 23px;
+      height: 32px;
+      position: relative;
+      display: inline-block;
+      top: 0px;
+      left: -2px;
+      background-color: #ffffff;
     }
 
     input[type='radio']:checked:after {
-      width: 15px;
-      height: 15px;
-      border-radius: 15px;
-      top: -2px;
-      left: -1px;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      top: -38px;
+      left: -3px;
       position: relative;
       background-color: $red;
       content: '';

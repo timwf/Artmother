@@ -11,12 +11,12 @@
   .art-single__carousel-wrap.container.grid
     <svg class="art-single__slide-left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 404.258 404.258" style="enable-background:new 0 0 404.258 404.258;" xml:space="preserve"><polygon points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 "/></svg>   
     .art-single__carousel    
-      img(src="./img/double-one.jpg", alt="Double one" )
-      img(src="./img/artist-one.jpg", alt="Double two" )
-      img(src="./img/art-two.jpg", alt="Double two" )
-      img(src="./img/double-one.jpg", alt="Double one" )
-      img(src="./img/artist-one.jpg", alt="Double two" )
-      img(src="./img/art-two.jpg", alt="Double two" )
+      img(class="js-lightbox" src="./img/double-one.jpg", alt="Double one" )
+      img(class="js-lightbox" src="./img/artist-one.jpg", alt="Double two" )
+      img(class="js-lightbox" src="./img/art-two.jpg", alt="Double two" )
+      img(class="js-lightbox" src="./img/double-one.jpg", alt="Double one" )
+      img(class="js-lightbox" src="./img/artist-one.jpg", alt="Double two" )
+      img(class="js-lightbox" src="./img/art-two.jpg", alt="Double two" )
     <svg class="art-single__slide-right" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 404.258 404.258" style="enable-background:new 0 0 404.258 404.258;" xml:space="preserve"><polygon points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 "/></svg>
   .art-single__title.grid.container
     h1.js-visibility.reveal-slide Straps, 2008
@@ -25,7 +25,7 @@
     .animated-line.js-visibility.animated-line-show  
   .art-single__details.grid.container
     .art-single__details-left
-      p “Each time you remember something, you’re not being teleported to the past— you’re physically experiencing it in the present. It’s recreated, it’s restructured, and it’s a part of the present moment.”Each time you remember something, you’re not being teleported to the past—you’re physically experiencing it. Each time you remember something, you’re not being teleported to the past—you’re physically ex. 
+      p “Each time you remember something, you’re not being teleported to the past— you’re physically experiencing it in the present. It’s recreated, it’s restructured, and it’s a part of the present moment.”Each time you remember something, you’re not being teleported to the past—you’re physically experiencing it. 
     .art-single__details-right  
       h4 Colour sugar lift, soap ground and spit bite aquatints
       h4 20.75 x 16.5in
@@ -39,5 +39,31 @@
     .art-single__details-btns.js-visibility.reveal-slide
       .art-single__details-btn
         p Shipping options
-      .art-single__details-btn
+      .art-single__details-btn.js-artworks-form
         p Talk to artmother
+.art-single__popup
+  .art-single__popup-inner
+    <svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512" viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"/></svg>
+    h4 We'll help you choose the right shipping option for this work: we can arrange the shipping for you or if you'd prefer you can arrange collection yourself
+    .art-single__popup-form
+      h4 For a purchase option with shipping quote
+      form(action="")
+        label(for="") First name*
+        input(type="text")
+        label(for="") Surname* 
+        input(type="text")
+        label(for="") Contact email*
+        input(type="text")
+        label(for="") Contact number*
+        input(type="text")
+        label(for="") Delivery country*
+        input(type="text")
+        label(for="") Delivery postcode*
+        input(type="text")
+        button Send
+        h4 If you'd prefer to discuss other options:
+        h5 Email us:
+        h5 collecting@artmother.com
+        h5 call us: 07007007000
+
+

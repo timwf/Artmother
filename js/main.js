@@ -268,6 +268,8 @@ $(document).ready(() => {
   function mobileMenu(){
     const btn = $('.mobile-page-header__hamburger')
     const menu = $('.mobile-page-header__menu')
+    const bg = $('.mobile-page-header__buttons')
+    
 
     if(!$(menu).length){
       return;
@@ -275,15 +277,18 @@ $(document).ready(() => {
 
     $(btn).on('click', function(){
       $(menu).toggleClass('active')
+      $(bg).toggleClass('active')
       console.log('clicked');
       
       if ($(menu).hasClass('active')){
         disableScrolling() 
         $(btn).addClass('active')
+        $(bg).addClass('active')
       }
       else{
         enableScrolling()
         $(btn).removeClass('active')
+        $(bg).removeClass('active')
       }      
     })
 
@@ -334,9 +339,7 @@ $(document).ready(() => {
 
     if(!$(centerLine).length){
       return;
-    }
-
-    
+    }   
 
     let tl = gsap.timeline(  {
       scrollTrigger: {
@@ -351,6 +354,27 @@ $(document).ready(() => {
     tl.to(centerLine, {duration: 10, stagger: 0.3, height: '90%'})
       .to(verticleLines, {duration: 1, stagger: 1, scale: 1}, '-=9.2')
       .to(date, {duration: 1, stagger: 1, opacity: 1, y: 0 }, '-=9.2')
+  }
+
+  function initTimelineMobile(){
+    const centerLine = $('.mobile-author-timeline__center-line')
+    const leadingLines = $('.mobile-author-timeline__leading-line')
+
+    
+
+    let tl = gsap.timeline(  {
+      scrollTrigger: {
+        trigger: centerLine,
+        start: 'top 80%',
+        toggleActions: 'play',
+        markers: false
+      }     
+
+    });
+
+    tl.to(centerLine, {duration: 6, stagger: 0.3, width: '98%'})
+      .to(leadingLines, {duration: 1, stagger: 0, height: '48%'}, '-=5.2')
+      // .to(date, {duration: 1, stagger: 1, opacity: 1, y: 0 }, '-=9.2')
   }
 
   function initAuthorVideoZoom(){
@@ -727,6 +751,22 @@ $(document).ready(() => {
 
   }
 
+  function initArtworkPopup(){
+    const close = $('.art-single__popup-inner svg')
+    const container = $('.art-single__popup')
+    const btn = $('.js-artworks-form')
+
+    $(btn).on('click', function(){
+      $(container).addClass('active')
+      disableScrolling()
+    })
+
+    $(close).on('click', function(){
+      $(container).removeClass('active')
+      enableScrolling()
+    })
+  }
+
 
 
   /* FUNCTION CALLS */
@@ -750,6 +790,8 @@ $(document).ready(() => {
     initArtGrid()
     initArtFilter()
     initArtSingleCarousel()
+    initTimelineMobile()
+    initArtworkPopup()
   }
 
   

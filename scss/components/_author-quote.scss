@@ -1,13 +1,8 @@
 .author-quote{
 
-  padding-top: 40px;
-
-
   &__inner{
-
+    
     h3{
-
-
       grid-column-start: 2;
       grid-column-end: 12;
       color: $red;
@@ -16,5 +11,11 @@
         grid-column-end: 7;
       }
     }
+  }
+}
+
+.full-width{
+  @include respond-to(sm){
+    grid-column-end: 12 !important;
   }
 }

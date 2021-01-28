@@ -1,6 +1,6 @@
-mixin author-quote(copy)
+mixin author-quote(copy, fullWidth)
   section.author-quote
     .author-quote__inner.grid.container.js-visibility.reveal-slide
-      h3=copy
+      h3(class=fullWidth ? 'full-width' : '')=copy
 
 

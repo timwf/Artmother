@@ -223,7 +223,6 @@
     grid-column-start: 3;
     grid-column-end: 12;
     display: flex;
-    margin-top: 20px;
     flex-wrap: wrap;
 
     @include respond-to(sm){
@@ -264,18 +263,125 @@
 
   &__line-after{
     position: relative;
+    display: table;
 
-    @include respond-to(lg){
-      &:after{
-        content: "";
-        display: block;
-        width: 100px;
+    &:after{
+      content: "";
+      display: block;
+      width: 100px;
+      height: 5px;
+      background-color: black;
+      position: absolute;
+      right: -115px;
+      top: 7px;
+
+      @include respond-to(sm){
+        top: 11px;
         height: 10px;
-        background-color: black;
-        position: absolute;
-        right: 0;
-        top: 10px;
       }
+    }
+
+  }
+
+  &__popup{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color:white;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    transition: 0.4s;
+
+    @include respond-to(sm){
+      width: 468px;
+    }
+
+    &.active{
+      transform: translateX(0%);
+    }
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    h4{
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h5{
+      font-family: 'NeueMachina-Regular';
+      font-size: 14px;
+    }
+    
+    h5:last-of-type{
+      margin-top: 20px;
+    }
+
+
+  }
+
+  &__popup-inner{
+    width: 100%;
+    padding: 100px 50px;
+    margin-top: 100px;
+    position: relative;
+
+    @include respond-to(sm){
+      padding: 40px 50px;
+      margin-top: 0px;
+    }
+
+    svg{
+      height: 20px;
+      width: 13px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      margin-top: 67px;
+
+      @include respond-to(sm){
+        margin-top: 0px;
+      }
+
+      @include hover{
+        cursor: pointer;
+
+      }
+    }
+
+  }
+
+  &__popup-form{
+    margin-left: 20px;
+
+    form{
+      display: grid;
+    }
+
+    input{
+      height: 20px;
+    }
+    label{
+      margin-top: 4px;
+      font-family: 'NeueMachina-Regular';
+    }
+
+
+    button{
+      width: 80px;
+      border: solid black;
+      border-width: 1px;
+      margin-top: 20px;
+      height: 20px;
+      margin-bottom: 30px;
     }
   }
 }

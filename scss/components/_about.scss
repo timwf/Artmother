@@ -1,6 +1,33 @@
 .about{
   padding-top: 40px;
 
+  .animated-line__container{
+    // position: absolute;
+    top: 40px;
+
+    @include respond-to(sm){
+      top: 37px;
+    }
+
+    @include respond-to(xl){
+      top: 40px;
+    }
+  }
+
+  .animated-line{
+    width: 441px;
+    
+
+    @include respond-to(sm){
+      width: 364px;
+    }
+
+    @include respond-to(xl){
+      width: 19vw;
+    }
+
+  }
+
   @include respond-to(sm){
     padding-top: 135px;
   }
@@ -13,6 +40,7 @@
   h3{
     margin-bottom: 20px;
     color: black;
+    position: relative;
     
     @include respond-to(lg){
       margin-bottom: 30px;
@@ -23,6 +51,8 @@
     margin-bottom: 20px;
     @include respond-to(lg){
       margin-bottom: 30px;
+      position: relative;
+      z-index: 9;
     }
   }
 
@@ -65,6 +95,10 @@
         transform: translateX(0px);
       }
     }
+  }
+
+  &__bottom{
+    margin-top: -10px;
   }
 
   &__bottom-left{

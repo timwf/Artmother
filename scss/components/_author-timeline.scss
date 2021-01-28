@@ -25,25 +25,25 @@
     &:before{
       content: "";
       display: block;
-      width: 8px;
-      height: 8px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
       background-color: $red;
       position: absolute;
       top: 0;
-      right: -4px;
+      right: -5px;
     }
 
     &:after{
       content: "";
       display: block;
-      width: 8px;
-      height: 8px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
       background-color: $red;
       position: absolute;
       bottom: 0;
-      right: -4px;
+      right: -5px;
     }
   }
 
@@ -162,7 +162,7 @@
 
     .author-timeline__leading-line{
       width: calc(100% + 51px);
-      left: -16px;  
+      left: -18px;  
       transform-origin: bottom left;
     }
   }
@@ -203,7 +203,7 @@
 
     .author-timeline__leading-line{
       width: calc(200% + 85px);
-      left: calc(-100% - 50px);
+      left: calc(-100% - 51px);
       transform-origin: bottom left;
     }
   }
@@ -246,6 +246,8 @@
     padding-left: 20px;
     padding-top: 20px;
     background-color: #F9F8D0;
+    height: 100vh;
+    overflow: hidden;
 
     p{      
       background-color: #f9f8d0;
@@ -278,17 +280,51 @@
     }
   }
 
+  &__center-line{
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    border-top: solid $red;
+    border-width: 2px;
+    margin-bottom: 4px;
+
+
+    &:before{
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $red;
+      position: absolute;
+      top: -5px;
+      left: 0px;
+    }
+
+    &:after{
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $red;
+      position: absolute;
+      top: -5px;
+      right: 0px;
+    }
+  }
+
   &__top{
     display: grid;
     grid-template-columns: repeat(36,minmax(0,1fr));
     grid-column-gap: 12px;
-    border-bottom: solid $red;
+    // border-bottom: solid $red;
     border-width: 2px;    
-    padding-bottom: 40px;
+
     padding-top: 49px;
     position: relative;
-
-
+    height: calc(50vh - 14px);
+    overflow: hidden;
   }
 
   &__title{
@@ -319,6 +355,10 @@
     grid-column-gap: 12px;    
     padding-top: 60px;
     padding-bottom: 40px;
+    margin-top: -4px;
+
+    height: calc(50vh);
+    overflow: hidden;
 
     .mobile-author-timeline__leading-line{
       bottom: auto;
@@ -328,12 +368,12 @@
   }
 
   &__leading-line{
-    height: 48%;
+    height: 0%;
     width: 9px;
     border-left: solid red;
     border-width: 2px;
     position: absolute;
-    bottom: -40px;
+    bottom: 4px;
     left: 25%;
     z-index: 1;
   }
@@ -347,12 +387,12 @@
 
   &__top-colomn-one-img{
     grid-column-start: 9;
-    grid-column-end: 16;
+    grid-column-end: 14;
   }
 
 
   &__top-colomn-two-text{
-    grid-column-start: 17;
+    grid-column-start: 14;
     grid-column-end: 22;
     position: relative;
   }
@@ -378,19 +418,19 @@
 
 
   &__bottom-colomn-one-text{
-    grid-column-start: 6;
-    grid-column-end: 12;
+    grid-column-start: 4;
+    grid-column-end: 9;
     position: relative;
   }
 
   &__bottom-colomn-one-img{
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 4;
   }
 
 
   &__bottom-colomn-two-text{
-    grid-column-start: 13;
+    grid-column-start: 11;
     grid-column-end: 18;
     position: relative;
   }
@@ -403,7 +443,7 @@
 
   &__bottom-colomn-three-text{
     grid-column-start: 28;
-    grid-column-end: 32;
+    grid-column-end: 34;
     position: relative;
   }
 
