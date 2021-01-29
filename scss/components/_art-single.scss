@@ -188,6 +188,10 @@
     }
   }
 
+  &__details{
+    overflow: hidden;
+  }
+
   &__details-left{
     grid-column-start: 4;
     grid-column-end: 12;

@@ -4,16 +4,23 @@
 
 .page-footer{
   background-color: white;
-  padding-top: 100px;
+  padding-top: 75px;
+  margin-top: -2px;
+
+  @include respond-to(sm){
+    padding-top: 150px;
+  }
+
 
   &__inner{
     border-top: solid black;
     border-width: 1px;
     padding-top: 16px;
-    padding-bottom: 34px;
+    padding-bottom: 77px;
 
     @include respond-to(sm){
       padding-bottom: 80px;
+      padding-bottom: 34px;
     }
 
     li{
@@ -23,6 +30,37 @@
     }
   
 
+  }
+
+  &__arrow{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    display: flex;
+    justify-content: center;
+    
+
+    svg{
+      height: 28px;
+      margin-top: -180px;
+      transform: rotate(180deg);
+      animation-name: bouncefooter;
+      position: relative;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      margin-right: 4px;
+
+      path{
+        fill: $red;
+      }
+
+      @include hover{
+        cursor: pointer;
+      }
+
+      @include respond-to(sm){
+        margin-top: -100px;
+      }
+    }
   }
 
   &__col-one{
@@ -111,7 +149,11 @@
         transform: scale(1.1);
       }
     }
-
-
   }
+}
+
+@keyframes bouncefooter {
+  0% {top: 0px;}
+  80% {top: -7px;}
+  100% {top: 0px;}
 }

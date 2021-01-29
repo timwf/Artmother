@@ -12,6 +12,9 @@
   &__inner{
     height: 100%;
     padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include respond-to(sm){
       padding: 50px;
@@ -25,19 +28,19 @@
     }
 
     img{
-      max-height: 100%;
-      margin: auto;
+      // max-height: 100%;
+      // margin: auto;
     }
   }
 
   &__image-wrap{
-    margin: auto;
-    width: fit-content;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // margin: auto;
+    // width: fit-content;
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
   }
 
   &__close{
@@ -65,4 +68,20 @@
 
 .js-lightbox:hover{
   cursor: pointer;
+}
+
+.magnifier-thumb-wrapper{
+  img{
+    max-width: 200000px;
+  } 
+}
+
+#thumb{
+  width: 100%;
+
+  @include respond-to(sm){
+    max-height: 79vh;
+    max-width: 200000px;
+    width: auto;
+  }
 }

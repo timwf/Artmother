@@ -46,7 +46,7 @@
 
 
       @include respond-to(sm){
-        font-size: 90px;
+        font-size: 78px;
       }
 
       @include respond-to(xl){
@@ -139,9 +139,51 @@
     animation-delay: 5s;
     animation-duration: 2s;
   }
+
+  &__arrow{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: absolute;
+    padding-bottom: 13px;
+    padding-top: 10px;
+    bottom: 0;
+    background-color: white;
+
+    @include respond-to(xl){
+      margin-top: 0px;
+    }
+
+    svg{
+      height: 20px;
+      transform: rotate(180deg);
+      position: relative;
+      animation-name: bounce;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+
+      @include hover{
+        cursor: pointer;
+      }
+
+      path{
+        fill: $red;
+      }
+
+      @include respond-to(xl){
+        height: 28px;
+      }
+    }
+  }
 }
 
 .artist-hero__second-name.delay{
   transition-delay: 6.8s !important;
 }
 
+@keyframes bounce {
+  0% {top: 0px;}
+  80% {top: -7px;}
+  100% {top: 0px;}
+}

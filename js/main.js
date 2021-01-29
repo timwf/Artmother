@@ -387,9 +387,15 @@ $(document).ready(() => {
 
     $(window).scroll(function(){
       var scrollPos = $(document).scrollTop();
+      let height = $(window).height();
 
-      if(scrollPos < 900){
-        scale = Math.abs(scrollPos - 1000)
+      if(scrollPos < height){
+        let newScroll = Math.abs(scrollPos - height)        
+
+        if (newScroll > 99) {
+          console.log(Math.abs(newScroll));
+          scale = newScroll
+        }
       }    
       
       $(video).css("transform", `scale(1.${scale})`)
@@ -400,25 +406,50 @@ $(document).ready(() => {
     const image = $('.js-lightbox')
     const lightbox = $('.lightbox')
     const close = $('.lightbox__close svg')
+    let count = 1
+
+    let width = $(window).width();
+
 
     if(!$(image).length){
       return;
     }
 
+
+
     $(image).on('click', function(){ 
+      count ++
       let showImage = $(this).attr('src')
       let src = $(lightbox).find('img')[0]
       let caption = $(this).attr('alt')
-      
       $(lightbox).find('p').text(caption)
       $(src).attr("src", showImage)
       disableScrolling()      
-      $(lightbox).fadeIn()
+      $(lightbox).fadeIn()     
+
+
+      if(width > 768){
+        $('#thumb-lens').remove()
+        let evt = new Event(),
+        m = new Magnifier(evt);     
+    
+        m.attach({
+            thumb: '#thumb',
+            large: showImage,
+            mode: 'inside',
+            zoom: 2.5,
+            zoomable: true
+        });   
+        
+      }
+
+
     })
 
     $(close).on('click', function(){
       $(lightbox).fadeOut()
       enableScrolling()
+
     })
   }
 
@@ -767,6 +798,26 @@ $(document).ready(() => {
     })
   }
 
+  function initHeroArrow() {
+    const arrow = $('.artist-hero__arrow svg')
+
+    $(arrow).on('click', function(){
+      var n = $(window).height() + 50;
+      $('html, body').animate({ scrollTop: n }, 800);
+    })    
+  }
+
+  function initFooterArrow() {
+    const arrow = $('.page-footer__arrow svg')
+
+    $(arrow).on('click', function(){
+      // var n = $(window).height() + 50;
+      $('html, body').animate({ scrollTop: 0 }, 800);
+    })
+    
+  }
+
+
 
 
   /* FUNCTION CALLS */
@@ -792,6 +843,8 @@ $(document).ready(() => {
     initArtSingleCarousel()
     initTimelineMobile()
     initArtworkPopup()
+    initHeroArrow()
+    initFooterArrow()
   }
 
   
